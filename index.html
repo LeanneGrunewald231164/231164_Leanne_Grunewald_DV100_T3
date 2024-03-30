@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UX-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <meta name="keywords" content="Red Planet Ventures, Solar System, Flight, Mars, Neptune, Jupiter, Saturn, Planets, Space, Tourism, Holiday, Vacation, Shuttle, Red Planet, Trip">
+    <meta name="author" content="Leanne Grunewald 231164">
+
+    <title>HTML Template</title>
+
+    <!--link bootstrap
+        link javascript
+        link Google Font files
+        link CSS-->
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    <!-- NAV -->
+    <!-- Let nav stay anchored at the top? -->
+    <nav>
+        <div class="flexContainerNav">
+            <div class="flexNavItem">
+                <a href="index.html"><img class="navLogo" src="assets/images/logo.png"></a>
+            </div>
+            <div class="flexNavItem">
+                    <a class="activeNav navLink" href="index.html">Home</a>
+                    <a class="navLink" href="pages/about.html">Flights</a>
+                    <a class="navLink" href="pages/contact.html">Contact</a>
+                </ul>
+            </div>
+            <div class="flexNavItem">
+                <!-- As hierdie als spans eerder is? -->
+                <!-- Check al die padding -->
+                <div class="flexContainerNavSearch">
+                    <div class="flexNavSearchItem flexNavSearchItemSearchPic">
+                        <!--&#128269;-->
+                        <span><img src="assets/images/search.png" ></span>
+                    </div>
+                    <div class="flexNavSearchItem">
+                        <form>
+                            <input type="text" placeholder="Search" />
+                        </form>
+                    </div>
+                    <div class="flexNavSearchItem flexNavSearchItemBasketPic">
+                        <!--&#129530;-->
+                        <span><img src="assets/images/basket.png" ></span>
+                        <span class="cartItemsAmount">2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+        <img src="assets/images/homePageHeader.png">
+        <div class="headerTextContainer">
+            <h1>Red Planet Ventures</h1>
+            <h3>Explore the solar system</h3>
+        </div>
+    </header>
+
+    <!-- TRIP BOOKER -->
+    <section class="tripBooker">
+        <div class="flexContainerTripBooker">
+            <div class="flexTripBookerItem">
+                <div class="flexTripBookerItemInner flexTripBookerItemInnerLeft">
+                    <span class="flexTripBookerItemInnerLeftLeft"><img src="assets/images/arrowLeftWhite.png" ></span>
+                    <img src="assets/images/marsSliderClipped1.png" >
+                    <span class="flexTripBookerItemInnerLeftRight"><img src="assets/images/arrowRightWhite.png" ></span>
+                </div>
+            </div>
+            <div class="flexTripBookerItem">
+                <div class="flexTripBookerItemInner flexTripBookerItemInnerRight">
+                    <h4>Featured Trip</h4>
+                    <h2>The Classic Mars Experience</h2>
+                    <p>Embark on a Mars vacation: red deserts, ancient relics, and towering canyons await. Enjoy low-gravity hiking, rover trips to Olympus Mons, and stargazing under Phobos and Deimos. Unforgettable adventures beckon on the rust-colored landscapes of the Red Planet. </p>
+                    <button class="buttonBookNow" type="button" onclick="location.href = 'pages/contact.html';">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHUTTLES -->
+    <section class="shuttle">
+        <div class="flexContainerShuttle">
+            <div class="flexShuttleItem">
+                <h4>Our Shuttles</h4>
+                <h2>Travel In Style With A Variety Of Shuttles</h2>
+                <p>Select from our range of luxury, commercial, or budget shuttles to fulfill your dream space vacation. Experience unparalleled comfort and convenience as you journey to your planet of choice, ensuring an unforgettable and tailored experienced for every traveler.</p>
+            </div>
+            <div class="flexShuttleItem">
+                <img src="assets/images/spacSchuttles.png">
+            </div>
+        </div>
+    </section>
+
+    <!-- SNEAK PEAK -->
+    <section class="sneakPeak">
+        <h4>Upcoming trip sneak peak</h4>
+        <h2>Take A Look At Some Of Our Upcoming Trips</h2>
+        <div class="flexContainerSneakPeak">
+            <div class="flexSneakPeakItem">
+                <img src="assets/images/upcomingTrip1.png">
+                <h5>The Classic Mars Experience</h5>
+                <p>Explore red deserts, ancient relics, low-gravity adventures on Mars.</p>
+            </div>
+            <div class="flexSneakPeakItem">
+                <img src="assets/images/upcomingTrip2.png">
+                <h5>Neptune's Cosmic Dive</h5>
+                <p>Experience Neptune's mysterious depths in a celestial voyage.</p>
+            </div>
+            <div class="flexSneakPeakItem">
+                <img src="assets/images/upcomingTrip3.png">
+                <h5>Jupiter: The Giant's Journey</h5>
+                <p>Embark on Jupiter and witness the gas giant's majesty.</p>
+            </div>
+            <div class="flexSneakPeakItem">
+                <img src="assets/images/upcomingTrip4.png">
+                <h5>Ring a Round a Saturn</h5>
+                <p>Explore Saturn's rings, moons, and enigmatic beauty on an odyssey.</p>
+            </div>
+        </div>
+        <button class="buttonBookNow" type="button" onclick="location.href = 'pages/contact.html';">Book a Trip Now</button>
+    </section>
+  
+    <!--FOOTER-->
+    <footer>
+        <!-- FLEX WRAP ALS IN EEN RY? -->
+        <div class="flexContainerFooter footerRow">
+            <div class="flexFooterItem">
+                <img src="assets/images/logo.png">
+            </div>
+            <div class="flexFooterItem">
+                <h6>Company</h6>
+            </div>
+            <div class="flexFooterItem">
+                <h6>Social Media Links</h6>
+            </div>
+        </div>
+        <div class="flexContainerFooter footerRow">
+            <div class="flexFooterItem">
+                <p>Offering unforgettable trips to explore planets in our solar system.</p>
+            </div>
+            <div class="flexFooterItem">
+                <a href="index.html">Home</a>
+                <a href="pages/about.html">Flights</a>
+                <a href="pages/contact.html">Contact</a>
+            </div>
+            <div class="flexFooterItem">
+                <img src="assets/images/smInstagram.png">
+                <img src="assets/images/smX.png">
+                <img src="assets/images/smTicktock.png">
+                <img src="assets/images/smFacebook.png">
+            </div>
+        </div>
+        <div class="flexContainerFooter footerRow">
+            <div class="flexFooterItem">
+                <p>All Rights Reserved &copy; Open Window 2024</p>
+            </div>
+            <div class="flexFooterItem">
+                
+            </div>
+            <div class="flexFooterItem">
+                <a href="#">Terms &amp; Conditions</a>
+                <a href="#">Privacy &amp; Policy</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

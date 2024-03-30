@@ -1,0 +1,541 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 0;
+}
+
+/** SHOULD THIS BE ONE? **/
+@font-face {
+    font-family: 'Porter Sans Block';
+    src: url(../assets/fonts/porter_sans_block/porter-sans-inline-block-webfont.woff format("woff");
+}
+
+@font-face {
+    font-family: 'Monoton';
+    src: url(../assets/fonts/monoton/monoton-regular-webfont.woff) format("woff");
+}
+
+/** NAVIGATION **/
+nav {
+
+    position: absolute;
+    top: 0px;
+    width: 94%;
+    /* background-color: #45016E; */
+    /* opacity: 0.5; */
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 40px;
+    margin-top: 1%;
+    background: rgba(197, 178, 208, 0.8);
+    z-index: 2;
+
+    /**font-family: 'Porter Sans Block';**/
+    font-size: 20px;
+    color: #000000;
+
+}
+
+.flexContainerNav {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+.flexContainerNav .flexNavItem {
+
+
+
+}
+
+
+.flexContainerNav .flexNavItem .navLogo {
+
+    width: 266px;
+
+}
+
+.flexContainerNav .flexNavItem .navLink {
+
+    text-decoration: none;
+    color: #000000;
+    margin-right: 2em;
+
+}
+
+.flexContainerNav .flexNavItem .navLink.activeNav {
+
+    color: #E61729;
+
+}
+
+.flexContainerNav .flexNavItem .flexContainerNavSearch {
+
+    background: #ffffff;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-bottom: 3%;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 4%;
+
+}
+
+.flexContainerNav .flexNavItem .flexNavSearchItem {
+
+    position: relative;
+
+}
+
+.flexContainerNav .flexNavItem .flexContainerNavSearch .flexNavSearchItemSearchPic img {
+
+    position: relative;
+    top: 5px;
+    margin-left: 4%;
+
+}
+
+
+.flexContainerNav .flexNavItem .flexContainerNavSearch input {
+
+    border: 0px;
+    border-right: 1px solid #333333;
+
+}
+
+.flexContainerNav .flexNavItem .flexContainerNavSearch .flexNavSearchItemBasketPic img {
+
+    padding: 5px 15px 5px 10px;
+    position: relative;
+    top: 4px;
+
+}
+
+.flexContainerNav .flexNavItem .flexContainerNavSearch .flexNavSearchItemBasketPic .cartItemsAmount {
+
+    position: absolute;
+    border-radius: 50px;
+    background-color: #f54b4c;
+    color: #ffffff;
+    padding: 5px 8px;
+    font-size: 10px;
+    top: -15px;
+    right: 0px;
+
+}
+
+/** HEADER **/
+header {
+
+    position: relative;
+
+}
+
+header img {
+
+    width: 100%;
+
+}
+
+header .headerTextContainer {
+
+    position: absolute;
+    bottom: 0px;
+
+}
+
+header .headerTextContainer h1 {
+
+    font-family: Monoton;
+    text-transform: uppercase;
+    word-spacing: 20px;
+    font-size: 5em;
+    width: 60%;
+    margin-left: 15%;
+    color: #ffffff;
+    text-shadow: 10px 10px #f54b4c;
+
+}
+
+header .headerTextContainer h3 {
+
+    font-family: Porter Sans Block;
+    text-transform: uppercase;
+    color: #45016E;
+
+}
+
+/** TRIP BOOKER **/
+.tripBooker {
+
+    background: #45016E;
+    
+}
+
+.tripBooker .flexContainerTripBooker {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.tripBooker .flexContainerTripBooker .flexTripBookerItem {
+    flex: 50%;
+    position: relative;
+}
+
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner {
+
+    width: 80%;
+    position: relative;
+    display: inline-block;
+
+}
+
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft {
+
+    text-align: right;
+
+}
+
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft .flexTripBookerItemInnerLeftLeft {
+
+    position: absolute;
+    left: 2%;
+    top: 45%;
+
+}
+
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft .flexTripBookerItemInnerLeftLeft img {
+
+    width: 30px;
+
+}
+
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft .flexTripBookerItemInnerLeftRight {
+
+    position: absolute;
+    right: 2%;
+    top: 45%;
+
+}
+
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft .flexTripBookerItemInnerLeftRight img {
+
+    width: 30px;
+
+}
+
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner h4 {
+
+    color: #53bfdb;
+    text-transform: uppercase;
+
+}
+
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner h2 {
+
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 800;
+
+}
+
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner p {
+
+    color: #ffffff;
+    font-weight: 200;
+
+}
+
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner .buttonBookNow {
+
+    color: #ffffff;
+    background-color: #E61729;
+    font-size: 17px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+
+}
+
+
+/** SHUTTLES **/
+.shuttle .flexContainerShuttle {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.shuttle .flexContainerShuttle .flexShuttleItem {
+    flex: 50%;
+}
+
+.shuttle .flexContainerShuttle .flexShuttleItem h4 {
+    color: #53bfdb;
+    text-transform: uppercase;
+}
+
+.shuttle .flexContainerShuttle .flexShuttleItem h2 {
+    color: #45016E;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+
+.shuttle .flexContainerShuttle .flexShuttleItem p {
+    color: #000000;
+    font-weight: 200;
+}
+
+
+/** SNEAK PEAK **/
+.sneakPeak {
+
+    background: #45016E;
+
+}
+
+.sneakPeak h4 {
+
+    color: #53bfdb;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.sneakPeak h2 {
+
+    color: #ffffff;
+    font-weight: 800;
+    text-align: center;
+
+}
+
+.sneakPeak .flexContainerSneakPeak {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.sneakPeak .flexContainerSneakPeak .flexSneakPeakItem {
+
+    
+
+}
+
+.sneakPeak .flexContainerSneakPeak .flexSneakPeakItem img {
+
+    display: block;
+    margin: 0 auto;
+
+}
+
+.sneakPeak .flexContainerSneakPeak .flexSneakPeakItem h5 {
+
+    color: #ffffff;
+    text-align: center;
+
+}
+
+.sneakPeak .flexContainerSneakPeak .flexSneakPeakItem p {
+
+    color: #ffffff;
+    text-align: center;
+
+}
+
+.sneakPeak .buttonBookNow {
+
+    color: #ffffff;
+    background-color: #E61729;
+    font-size: 17px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+
+/** FOOTER **/
+.flexContainerFooter {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.flexContainerFooter .flexFooterItem img {
+
+    width: 266px;
+
+}
+
+
+/**
+.flexContainerNav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    **/
+    /** In progress **/
+    /**
+    background-color: #bfb2c6;
+    border-radius: 10px;
+}
+
+.flexContainerNav .flexNavItem {
+    flex: 33%;
+    height: 100%;
+}
+
+.flexContainerNav .flexNavItem img {
+    width: auto;
+    height: 100%;
+}
+
+.flexContainerNav .flexNavItem a {
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.flexContainerNav .flexNavItem a:hover {
+    color: #45016E;
+}
+
+.flexContainerNav .flexNavItem a.activeNav {
+    color: #E61729;
+}
+
+
+
+
+.backgroundImage {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    background-image: url('../assets/images/headerbackBack.png');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+
+.flexContainerShuttle {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flexContainerShuttle .flexShuttleItem {
+    flex: 50%;
+}
+
+
+.flexContainerFooterTop {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flexContainerFooterTop .flexFooterTopItem {
+    flex: 33%;
+}
+
+
+.buttonBookNow {
+    color: #ffffff;
+    background-color: #E61729;
+    font-size: 17px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+}
+**/
+/**IN PROGRESS**/
+/**
+.buttonBookNow:hover {
+    cursor: pointer;
+}
+**/
+
+
+
+/* .flexContainer {
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+} 
+
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexItem2 {
+    padding: 20px;
+    flex: 50%;
+}
+
+.flexItem2 img {
+    width: 100%;
+}
+
+.flexItem3 {
+    padding: 10px;
+    flex: 30%;
+}
+
+.flexItem3 img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+
+@media (max-width:800px){
+    .flexContainer {
+        flex-direction: column;
+    }
+
+    .flexItem3 img {
+        height: auto;
+    }
+}*/
+
+
