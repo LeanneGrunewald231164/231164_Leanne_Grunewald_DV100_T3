@@ -8,16 +8,36 @@ body {
     margin: 0;
 }
 
-/** SHOULD THIS BE ONE? **/
 @font-face {
-    font-family: 'Porter Sans Block';
-    src: url(../assets/fonts/porter_sans_block/porter-sans-inline-block-webfont.woff format("woff");
+    font-family: 'porter_sans_block';
+    src: url('../assets/fonts/porter_sans_block/porter-sans-inline-block-webfont.eot');
+    src: url('../assets/fonts/porter_sans_block/porter-sans-inline-block-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/porter_sans_block/porter-sans-inline-block-webfont.woff') format('woff'),
+         url('../assets/fonts/porter_sans_block/porter-sans-inline-block-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 @font-face {
+    font-family: 'Poppins Bold';
+    src: url(../assets/fonts/poppins/poppins-bold-webfont.woff format("woff");
+}
+
+@font-face {
+    font-family: 'Poppins Medium';
+    src: url(../assets/fonts/poppins/poppins-medium-webfont.woff format("woff");
+}
+
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url(../assets/fonts/poppins/poppins-regular-webfont.woff format("woff");
+}
+
+/**@font-face {
     font-family: 'Monoton';
     src: url(../assets/fonts/monoton/monoton-regular-webfont.woff) format("woff");
-}
+}**/
 
 /** NAVIGATION **/
 nav {
@@ -141,12 +161,16 @@ nav {
 header {
 
     position: relative;
+    max-height: 940px;
+    max-width: 100%;
+    overflow: hidden;
 
 }
 
 header img {
 
     width: 100%;
+    height: 100%;
 
 }
 
@@ -159,22 +183,23 @@ header .headerTextContainer {
 
 header .headerTextContainer h1 {
 
-    font-family: Monoton;
+    font-family: Porter_Sans_Block;
     text-transform: uppercase;
-    word-spacing: 20px;
-    font-size: 5em;
+    font-size: 48px;
     width: 60%;
     margin-left: 15%;
-    color: #ffffff;
-    text-shadow: 10px 10px #f54b4c;
+    color: #f54b4c;
+    /**text-shadow: 10px 10px #f54b4c;**/
 
 }
 
 header .headerTextContainer h3 {
 
-    font-family: Porter Sans Block;
+    font-family: serif;
     text-transform: uppercase;
     color: #45016E;
+    width: 60%;
+    margin-left: 15%;
 
 }
 
@@ -200,19 +225,30 @@ header .headerTextContainer h3 {
 
 .tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner {
 
-    width: 80%;
-    position: relative;
-    display: inline-block;
+    text-align: left;
+    width: 100%;
+    padding: 7% 7%;
 
 }
 
 .tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft {
 
     text-align: right;
+    width: 100%;
+    padding: 7% 0%;
 
 }
 
-.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft .flexTripBookerItemInnerLeftLeft {
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft .flexTripBookerItemInnerLeftInner {
+
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 609px;
+
+}
+
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft .flexTripBookerItemInnerLeftInner .flexTripBookerItemInnerLeftLeft {
 
     position: absolute;
     left: 2%;
@@ -240,10 +276,18 @@ header .headerTextContainer h3 {
 
 }
 
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft .flexTripBookerItemInnerLeftInner .flexTripBookerItemInnerLeftMiddle {
+
+    width: 100%;
+
+}
+
 .tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner h4 {
 
     color: #53bfdb;
     text-transform: uppercase;
+    font-family: poppins medium;
+    font-size: 18px;
 
 }
 
@@ -252,6 +296,8 @@ header .headerTextContainer h3 {
     color: #ffffff;
     text-transform: uppercase;
     font-weight: 800;
+    font-family: poppins bold;
+    font-size: 48px;
 
 }
 
@@ -259,6 +305,8 @@ header .headerTextContainer h3 {
 
     color: #ffffff;
     font-weight: 200;
+    font-family: poppins regular;
+    font-size: 18px;
 
 }
 
@@ -266,11 +314,13 @@ header .headerTextContainer h3 {
 
     color: #ffffff;
     background-color: #E61729;
-    font-size: 17px;
+    font-size: 20px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 20px;
-    width: 250px;
+    width: 270px;
+    height: 70px;
+    font-family: poppins semi bold;
 
 }
 
@@ -380,6 +430,12 @@ header .headerTextContainer h3 {
 
 
 /** FOOTER **/
+footer {
+
+    padding: 4% 8%;
+
+}
+
 .flexContainerFooter {
 
     display: flex;
@@ -388,9 +444,39 @@ header .headerTextContainer h3 {
 
 }
 
-.flexContainerFooter .flexFooterItem img {
+.flexContainerFooter .flexFooterItem {
+
+    flex: 33%;
+
+}
+
+.flexContainerFooter .flexFooterItem.footerLogo img {
 
     width: 266px;
+
+}
+
+.flexContainerFooter .flexFooterItem.footerHeading h6 {
+
+    font-family: Poppins Medium;
+    font-size: 18px;
+    color: #45016E;
+
+}
+
+.flexContainerFooter .flexFooterItem.footerMainParagraph p {
+
+    font-family: Poppins Regular;
+    font-size: 18px;
+    color: #676767;
+    
+}
+
+.flexContainerFooter .flexFooterItem.footerMenu a {
+
+    color: #676767;
+    display: block;
+    text-decoration: none;
 
 }
 
