@@ -252,19 +252,11 @@ header .headerTextContainer h3 {
     position: relative;
 }
 
-.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner {
-
-    text-align: left;
-    width: 63%;
-    padding: 7% 7%;
-
-}
-
 .tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft {
 
     text-align: right;
     width: 100%;
-    padding: 7% 0%;
+    padding: 7% 4%;
 
 }
 
@@ -285,21 +277,7 @@ header .headerTextContainer h3 {
 
 }
 
-.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft .flexTripBookerItemInnerLeftLeft img {
-
-    width: 30px;
-
-}
-
-.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft .flexTripBookerItemInnerLeftRight {
-
-    position: absolute;
-    right: 2%;
-    top: 45%;
-
-}
-
-.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft .flexTripBookerItemInnerLeftRight img {
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft .flexTripBookerItemInnerLeftInner .flexTripBookerItemInnerLeftLeft img {
 
     width: 30px;
 
@@ -311,7 +289,38 @@ header .headerTextContainer h3 {
 
 }
 
-.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner h4 {
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft .flexTripBookerItemInnerLeftInner .flexTripBookerItemInnerLeftRight {
+
+    position: absolute;
+    right: 2%;
+    top: 45%;
+
+}
+
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft .flexTripBookerItemInnerLeftInner .flexTripBookerItemInnerLeftRight img {
+
+    width: 30px;
+
+}
+
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerRight {
+
+    text-align: left;
+    width: 100%;
+    padding: 7% 4%;
+
+}
+
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerRight .flexTripBookerItemInnerRightInner {
+
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 609px;
+
+}
+
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerRight .flexTripBookerItemInnerRightInner h4 {
 
     color: #53bfdb;
     text-transform: uppercase;
@@ -321,7 +330,7 @@ header .headerTextContainer h3 {
 
 }
 
-.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner h2 {
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerRight .flexTripBookerItemInnerRightInner h2 {
 
     color: #ffffff;
     text-transform: uppercase;
@@ -334,7 +343,7 @@ header .headerTextContainer h3 {
 
 }
 
-.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner p {
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerRight .flexTripBookerItemInnerRightInner p {
 
     color: #ffffff;
     font-weight: 200;
@@ -345,7 +354,7 @@ header .headerTextContainer h3 {
 
 }
 
-.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner .buttonBookNow {
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerRight .flexTripBookerItemInnerRightInner .buttonBookNow {
 
     color: #ffffff;
     background-color: #E61729;
@@ -373,24 +382,71 @@ header .headerTextContainer h3 {
 
 .shuttle .flexContainerShuttle .flexShuttleItem {
     flex: 50%;
+    position: relative;
 }
 
-.shuttle .flexContainerShuttle .flexShuttleItem h4 {
+.shuttle .flexContainerShuttle .flexShuttleItem .flexShuttleItemInner.flexShuttleItemInnerLeft {
+    text-align: right;
+    width: 100%;
+    padding: 7% 4%;
+}
+
+.shuttle .flexContainerShuttle .flexShuttleItem .flexShuttleItemInner.flexShuttleItemInnerLeft .flexShuttleItemInnerLeftInner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 609px;
+}
+
+.shuttle .flexContainerShuttle .flexShuttleItem .flexShuttleItemInner.flexShuttleItemInnerLeft .flexShuttleItemInnerLeftInner h4 {
+    text-align: left;
     color: #53bfdb;
     text-transform: uppercase;
+    font-family: poppins_medium;
+    font-size: 18px;
+    margin-bottom: 0px;
 }
 
-.shuttle .flexContainerShuttle .flexShuttleItem h2 {
+.shuttle .flexContainerShuttle .flexShuttleItem .flexShuttleItemInner.flexShuttleItemInnerLeft .flexShuttleItemInnerLeftInner h2 {
+    text-align: left;
     color: #45016E;
-    text-transform: uppercase;
     font-weight: 800;
+    font-family: poppins_bold;
+    font-size: 48px;
+    line-height: 65px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-
-.shuttle .flexContainerShuttle .flexShuttleItem p {
-    color: #000000;
+.shuttle .flexContainerShuttle .flexShuttleItem .flexShuttleItemInner.flexShuttleItemInnerLeft .flexShuttleItemInnerLeftInner p {
+    text-align: left;
+    color: #333333;
     font-weight: 200;
+    font-family: poppins_regular;
+    font-size: 18px;
+    margin-top: 0px;
+    line-height: 30px;
 }
+
+.shuttle .flexContainerShuttle .flexShuttleItem .flexShuttleItemInner.flexShuttleItemInnerRight {
+    text-align: left;
+    width: 100%;
+    padding: 7% 4%;
+}
+
+.shuttle .flexContainerShuttle .flexShuttleItem .flexShuttleItemInner.flexShuttleItemInnerRight .flexShuttleItemInnerRightInner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 609px;
+}
+
+.shuttle .flexContainerShuttle .flexShuttleItem .flexShuttleItemInner.flexShuttleItemInnerRight .flexShuttleItemInnerRightInner img {
+    width: 100%;
+}
+
+
+
 
 
 /** SNEAK PEAK **/
@@ -481,11 +537,57 @@ footer {
 
 }
 
-.flexContainerFooter .flexFooterItem {
+.flexContainerFooter .flexFooterItem.flexFooterItemBig {
 
-    flex: 33%;
+    flex: 40%;
 
 }
+
+.flexContainerFooter .flexFooterItem.flexFooterItemSmall {
+
+    flex: 20%;
+
+}
+
+.flexContainerFooter .flexFooterItem .flexFooterItemInner {
+    width: 80%;
+}
+
+.flexContainerFooter .flexFooterItem.footerMainParagraph .flexFooterItemInner p {
+
+    text-align: left;
+    color: #676767;
+    font-weight: 200;
+    font-family: poppins_regular;
+    font-size: 18px;
+    margin-top: 0px;
+    line-height: 30px;
+
+}
+
+.flexContainerFooter .flexFooterItem.footerMenu .flexFooterItemInner a {
+
+    text-align: left;
+    color: #676767;
+    font-weight: 200;
+    font-family: poppins_regular;
+    font-size: 18px;
+    margin-top: 0px;
+    line-height: 30px;
+    display: block;
+    text-decoration: none;
+
+}
+
+
+
+
+
+
+
+
+
+
 
 .flexContainerFooter .flexFooterItem.footerLogo img {
 
@@ -497,16 +599,8 @@ footer {
 
     font-family: poppins_medium;
     font-size: 18px;
-    color: #45016E;
-
-}
-
-.flexContainerFooter .flexFooterItem.footerMainParagraph p {
-
-    font-family: poppins_regular;
-    font-size: 18px;
     color: #676767;
-    
+
 }
 
 .flexContainerFooter .flexFooterItem.footerMenu a {
