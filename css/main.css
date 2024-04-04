@@ -3,7 +3,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: poppins_medium, Arial, Helvetica, sans-serif;
     font-weight: 600;
     margin: 0;
 }
@@ -16,28 +16,35 @@ body {
          url('../assets/fonts/porter_sans_block/porter-sans-inline-block-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
-    font-family: 'Poppins Bold';
-    src: url(../assets/fonts/poppins/poppins-bold-webfont.woff format("woff");
+    font-family: 'poppins_bold';
+    src: url('../assets/fonts/poppins/poppins-bold-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'Poppins Medium';
-    src: url(../assets/fonts/poppins/poppins-medium-webfont.woff format("woff");
+    font-family: 'poppins_semi_bold';
+    src: url('../assets/fonts/poppins/poppins-semibold-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'Poppins Regular';
-    src: url(../assets/fonts/poppins/poppins-regular-webfont.woff format("woff");
+    font-family: 'poppins_medium';
+    src: url('../assets/fonts/poppins/poppins-medium-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
-/**@font-face {
-    font-family: 'Monoton';
-    src: url(../assets/fonts/monoton/monoton-regular-webfont.woff) format("woff");
-}**/
+@font-face {
+    font-family: 'poppins_regular';
+    src: url('../assets/fonts/poppins/poppins-regular-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
 
 /** NAVIGATION **/
 nav {
@@ -85,8 +92,10 @@ nav {
 .flexContainerNav .flexNavItem .navLink {
 
     text-decoration: none;
-    color: #000000;
+    color: #333333;
     margin-right: 2em;
+    font-weight: 400;
+    font-size: 20px;
 
 }
 
@@ -110,7 +119,7 @@ nav {
     padding-bottom: 3%;
     padding-top: 2%;
     padding-left: 2%;
-    padding-right: 4%;
+    padding-right: 2%;
 
 }
 
@@ -123,16 +132,32 @@ nav {
 .flexContainerNav .flexNavItem .flexContainerNavSearch .flexNavSearchItemSearchPic img {
 
     position: relative;
-    top: 5px;
+    top: 3px;
     margin-left: 4%;
+    width: 35px;
 
 }
-
 
 .flexContainerNav .flexNavItem .flexContainerNavSearch input {
 
     border: 0px;
-    border-right: 1px solid #333333;
+    border-right: 2px solid #999999;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+
+}
+
+.flexContainerNav .flexNavItem .flexContainerNavSearch input::placeholder {
+
+    color: #333333;
+
+}
+
+.flexContainerNav .flexNavItem .flexContainerNavSearch .flexNavSearchItemBasketPic {
+
+    padding-right: 10px;
 
 }
 
@@ -150,10 +175,10 @@ nav {
     border-radius: 50px;
     background-color: #f54b4c;
     color: #ffffff;
-    padding: 5px 8px;
-    font-size: 10px;
-    top: -15px;
-    right: 0px;
+    padding: 7px 11px;
+    font-size: 16px;
+    top: -19px;
+    right: -4px;
 
 }
 
@@ -189,17 +214,21 @@ header .headerTextContainer h1 {
     width: 60%;
     margin-left: 15%;
     color: #f54b4c;
+    margin-bottom: 0px;
     /**text-shadow: 10px 10px #f54b4c;**/
 
 }
 
 header .headerTextContainer h3 {
 
-    font-family: serif;
+    font-family: arial;
     text-transform: uppercase;
     color: #45016E;
     width: 60%;
     margin-left: 15%;
+    margin-top: 1%;
+    margin-bottom: 6%;
+    font-size: 24px;
 
 }
 
@@ -226,7 +255,7 @@ header .headerTextContainer h3 {
 .tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner {
 
     text-align: left;
-    width: 100%;
+    width: 63%;
     padding: 7% 7%;
 
 }
@@ -286,8 +315,9 @@ header .headerTextContainer h3 {
 
     color: #53bfdb;
     text-transform: uppercase;
-    font-family: poppins medium;
+    font-family: poppins_medium;
     font-size: 18px;
+    margin-bottom: 0px;
 
 }
 
@@ -296,8 +326,11 @@ header .headerTextContainer h3 {
     color: #ffffff;
     text-transform: uppercase;
     font-weight: 800;
-    font-family: poppins bold;
+    font-family: poppins_bold;
     font-size: 48px;
+    line-height: 65px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
 }
 
@@ -305,8 +338,10 @@ header .headerTextContainer h3 {
 
     color: #ffffff;
     font-weight: 200;
-    font-family: poppins regular;
+    font-family: poppins_regular;
     font-size: 18px;
+    margin-top: 0px;
+    line-height: 30px;
 
 }
 
@@ -320,7 +355,9 @@ header .headerTextContainer h3 {
     padding: 20px;
     width: 270px;
     height: 70px;
-    font-family: poppins semi bold;
+    font-family: poppins_semi_bold;
+    border: none;
+    margin-top: 20px;
 
 }
 
@@ -458,7 +495,7 @@ footer {
 
 .flexContainerFooter .flexFooterItem.footerHeading h6 {
 
-    font-family: Poppins Medium;
+    font-family: poppins_medium;
     font-size: 18px;
     color: #45016E;
 
@@ -466,7 +503,7 @@ footer {
 
 .flexContainerFooter .flexFooterItem.footerMainParagraph p {
 
-    font-family: Poppins Regular;
+    font-family: poppins_regular;
     font-size: 18px;
     color: #676767;
     
@@ -477,6 +514,27 @@ footer {
     color: #676767;
     display: block;
     text-decoration: none;
+
+}
+
+.flexContainerFooter .flexFooterItem .flexContainerSocials {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    WIDTH: 100%;
+
+}
+
+.flexContainerFooter .flexFooterItem .flexContainerSocials .flexSocialsItem {
+
+    flex: 25%;
+
+}
+
+.flexContainerFooter .flexFooterItem .flexContainerSocials .flexSocialsItem img {
+
+    width: 77px;
 
 }
 
