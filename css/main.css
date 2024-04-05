@@ -793,6 +793,7 @@ footer hr {
     bottom: 0px;
     width: 100%;
     background: #45016E;
+    padding: 1%;
 }
 
 .flightsPage header.backgroundImage .headerFilterContainer .flexContainerHeaderFilterContainer {
@@ -807,7 +808,76 @@ footer hr {
     flex: 50%;
 }
 
+.flightsPage header.backgroundImage .headerFilterContainer .flexContainerHeaderFilterContainer .flexHeaderFilterContainerItem .flexHeaderFilterContainerItemInner.flexHeaderFilterContainerItemInnerLeft {
 
+    text-align: left;
+    margin-left: 15%;
+
+}
+
+.flightsPage header.backgroundImage .headerFilterContainer .flexContainerHeaderFilterContainer .flexHeaderFilterContainerItem .flexHeaderFilterContainerItemInner.flexHeaderFilterContainerItemInnerLeft .flexHeaderFilterContainerItemInnerLeftInner { 
+
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2%;
+
+}
+
+.flexContainerHeaderFilterContainer .flexHeaderFilterContainerItem .flexHeaderFilterContainerItemInner.flexHeaderFilterContainerItemInnerLeft .flexHeaderFilterContainerItemInnerLeftInner p { 
+
+    color: #ffffff;
+    font-weight: 600;
+    font-family: poppins_regular;
+    font-size: 18px;
+
+}
+
+.flexContainerHeaderFilterContainer .flexHeaderFilterContainerItem .flexHeaderFilterContainerItemInner.flexHeaderFilterContainerItemInnerLeft .flexHeaderFilterContainerItemInnerLeftInner p.borderLeft { 
+
+    width: 3px;
+    background: #999999;
+    height: 40px;
+
+}
+
+.flightsPage header.backgroundImage .headerFilterContainer .flexContainerHeaderFilterContainer .flexHeaderFilterContainerItem .flexHeaderFilterContainerItemInner.flexHeaderFilterContainerItemInnerRight {
+
+    text-align: right;
+    margin-right: 15%;
+
+}
+
+.flightsPage header.backgroundImage .headerFilterContainer .flexContainerHeaderFilterContainer .flexHeaderFilterContainerItem .flexHeaderFilterContainerItemInner.flexHeaderFilterContainerItemInnerRight .flexHeaderFilterContainerItemInnerRightInner  { 
+
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2%;
+
+}
+
+.flightsPage header.backgroundImage .headerFilterContainer .flexContainerHeaderFilterContainer .flexHeaderFilterContainerItem .flexHeaderFilterContainerItemInner.flexHeaderFilterContainerItemInnerRight .flexHeaderFilterContainerItemInnerRightInner p { 
+
+    color: #ffffff;
+    font-weight: 600;
+    font-family: poppins_regular;
+    font-size: 18px;
+
+}
+
+.flightsPage header.backgroundImage .headerFilterContainer .flexContainerHeaderFilterContainer .flexHeaderFilterContainerItem .flexHeaderFilterContainerItemInner.flexHeaderFilterContainerItemInnerRight .flexHeaderFilterContainerItemInnerRightInner p span { 
+
+    background: rgba(197, 178, 208, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    color: #45016E;
+
+}
+
+.flightsPage header.backgroundImage .headerFilterContainer .flexContainerHeaderFilterContainer .flexHeaderFilterContainerItem .flexHeaderFilterContainerItemInner.flexHeaderFilterContainerItemInnerRight .flexHeaderFilterContainerItemInnerRightInner p span.paddingRight { 
+
+    padding-right: 70%;
+
+}
 
 
 header.backgroundImage img {
@@ -836,7 +906,7 @@ header.backgroundImage img {
 
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
 
 }
 
@@ -898,7 +968,7 @@ header.backgroundImage img {
 
 }
 
-.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerRight .flexTripBookerItemInnerRightInner p {
+.flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner p {
 
     color: #ffffff;
     font-weight: 200;
@@ -910,7 +980,23 @@ header.backgroundImage img {
 
 }
 
-.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerRight .flexTripBookerItemInnerRightInner .buttonBookNow {
+.flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonAmount {
+
+    color: #ffffff;
+    background-color: #E61729;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 12px;
+    padding: 20px;
+    width: 270px;
+    height: 70px;
+    font-family: poppins_semi_bold;
+    border: none;
+    margin-top: 20px;
+
+}
+
+.flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonBookNow {
 
     color: #ffffff;
     background-color: #E61729;
@@ -1010,11 +1096,16 @@ header.backgroundImage img {
 
 
 /** CONTACT **/
+.contact {
+
+    margin-top: 5%;
+}
+
 .contact .flexContainerContact {
 
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
 
 }
 
@@ -1051,6 +1142,7 @@ header.backgroundImage img {
 
     text-align: left;
     color: #45016E;
+    text-transform: uppercase;
     font-weight: 800;
     font-family: poppins_bold;
     font-size: 48px;
@@ -1065,6 +1157,8 @@ header.backgroundImage img {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 50%;
+    margin-bottom: 15%;
 
 }
 
@@ -1086,17 +1180,56 @@ header.backgroundImage img {
 
 }
 
+.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerLeft .flexContactItemInnerLeftInner .flexContactMap iframe {
 
+    border-radius: 30px;
 
+}
 
+.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerRight .flexContactItemInnerRightInner form {
+    background-image: url('../assets/images/formBack.png');
+    background-size: cover;
+    background-position: center;
+    padding: 6%;
+    border-radius: 40px;
+    width: 90%;
+}
 
+.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerRight .flexContactItemInnerRightInner form h2 {
+    text-align: left;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: poppins_bold;
+    font-size: 48px;
+    line-height: 65px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
+.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerRight .flexContactItemInnerRightInner form fieldset {
+    border: 0;
+}
 
+.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerRight .flexContactItemInnerRightInner form fieldset p {
+    text-align: left;
+    color: #ffffff;
+    font-weight: 200;
+    font-family: poppins_regular;
+    font-size: 18px;
+    margin-top: 0px;
+    line-height: 30px;
+    width: 75%;
+}
 
-
-
-
-
+.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerRight .flexContactItemInnerRightInner form fieldset input {
+    width: 100%;
+    padding: 5% 4%;
+    border-radius: 10px;
+    color: #333333;
+    font-family: poppins_regular;
+    font-size: 16px;
+}
 
 /**
 .flexContainerNav {
