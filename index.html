@@ -22,33 +22,35 @@
     <!-- NAV -->
     <!-- Let nav stay anchored at the top? -->
     <nav>
-        <div class="flexContainerNav">
-            <div class="flexNavItem">
-                <a href="index.html"><img class="navLogo" src="assets/images/logo.png"></a>
-            </div>
-            <div class="flexNavItem">
-                    <a class="activeNav navLink" href="index.html">Home</a>
-                    <a class="navLink" href="pages/about.html">Flights</a>
-                    <a class="navLink" href="pages/contact.html">Contact</a>
-                </ul>
-            </div>
-            <div class="flexNavItem">
-                <!-- As hierdie als spans eerder is? -->
-                <!-- Check al die padding -->
-                <div class="flexContainerNavSearch">
-                    <div class="flexNavSearchItem flexNavSearchItemSearchPic">
-                        <!--&#128269;-->
-                        <span><img src="assets/images/search.png" ></span>
-                    </div>
-                    <div class="flexNavSearchItem">
-                        <form>
-                            <input type="text" placeholder="Search" />
-                        </form>
-                    </div>
-                    <div class="flexNavSearchItem flexNavSearchItemBasketPic">
-                        <!--&#129530;-->
-                        <span><img src="assets/images/basket.png" ></span>
-                        <span class="cartItemsAmount">2</span>
+        <div class="navInner">
+            <div class="flexContainerNav">
+                <div class="flexNavItem">
+                    <a href="index.html"><img class="navLogo" src="assets/images/logo.png"></a>
+                </div>
+                <div class="flexNavItem">
+                        <a class="activeNav navLink" href="index.html">Home</a>
+                        <a class="navLink" href="pages/flights.html">Flights</a>
+                        <a class="navLink" href="pages/contact.html">Contact</a>
+                    </ul>
+                </div>
+                <div class="flexNavItem">
+                    <!-- As hierdie als spans eerder is? -->
+                    <!-- Check al die padding -->
+                    <div class="flexContainerNavSearch">
+                        <div class="flexNavSearchItem flexNavSearchItemSearchPic">
+                            <!--&#128269;-->
+                            <span><img src="assets/images/search.png" ></span>
+                        </div>
+                        <div class="flexNavSearchItem">
+                            <form>
+                                <input type="text" placeholder="Search" />
+                            </form>
+                        </div>
+                        <div class="flexNavSearchItem flexNavSearchItemBasketPic">
+                            <!--&#129530;-->
+                            <span><img src="assets/images/basket.png" ></span>
+                            <span class="cartItemsAmount">2</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -113,31 +115,41 @@
 
     <!-- SNEAK PEAK -->
     <section class="sneakPeak">
-        <h4>Upcoming trip sneak peak</h4>
-        <h2>Take A Look At Some Of Our Upcoming Trips</h2>
-        <div class="flexContainerSneakPeak">
-            <div class="flexSneakPeakItem">
-                <img src="assets/images/upcomingTrip1.png">
-                <h5>The Classic Mars Experience</h5>
-                <p>Explore red deserts, ancient relics, low-gravity adventures on Mars.</p>
+        <div class="sneakPeakInner">
+            <h4>Upcoming trip sneak peak</h4>
+            <h2>Take A Look At Some Of Our Upcoming Trips</h2>
+            <div class="flexContainerSneakPeak">
+                <div class="flexSneakPeakItem">
+                    <div class="flexSneakPeakItemInner">
+                        <img src="assets/images/upcomingTrip1.png">
+                        <h5>The Classic Mars Experience</h5>
+                        <p>Explore red deserts, ancient relics, low-gravity adventures on Mars.</p>
+                    </div>
+                </div>
+                <div class="flexSneakPeakItem">
+                    <div class="flexSneakPeakItemInner">
+                        <img src="assets/images/upcomingTrip2.png">
+                        <h5>Neptune's Cosmic Dive</h5>
+                        <p>Experience Neptune's mysterious depths in a celestial voyage.</p>
+                    </div>
+                </div>
+                <div class="flexSneakPeakItem">
+                    <div class="flexSneakPeakItemInner">
+                        <img src="assets/images/upcomingTrip3.png">
+                        <h5>Jupiter: The Giant's Journey</h5>
+                        <p>Embark on Jupiter and witness the gas giant's majesty.</p>
+                    </div>
+                </div>
+                <div class="flexSneakPeakItem">
+                    <div class="flexSneakPeakItemInner">
+                        <img src="assets/images/upcomingTrip4.png">
+                        <h5>Ring a Round a Saturn</h5>
+                        <p>Explore Saturn's rings, moons, and enigmatic beauty on an odyssey.</p>
+                    </div>
+                </div>
             </div>
-            <div class="flexSneakPeakItem">
-                <img src="assets/images/upcomingTrip2.png">
-                <h5>Neptune's Cosmic Dive</h5>
-                <p>Experience Neptune's mysterious depths in a celestial voyage.</p>
-            </div>
-            <div class="flexSneakPeakItem">
-                <img src="assets/images/upcomingTrip3.png">
-                <h5>Jupiter: The Giant's Journey</h5>
-                <p>Embark on Jupiter and witness the gas giant's majesty.</p>
-            </div>
-            <div class="flexSneakPeakItem">
-                <img src="assets/images/upcomingTrip4.png">
-                <h5>Ring a Round a Saturn</h5>
-                <p>Explore Saturn's rings, moons, and enigmatic beauty on an odyssey.</p>
-            </div>
+            <button class="buttonBookNow" type="button" onclick="location.href = 'pages/contact.html';">Book a Trip Now</button>
         </div>
-        <button class="buttonBookNow" type="button" onclick="location.href = 'pages/contact.html';">Book a Trip Now</button>
     </section>
   
     <!--FOOTER-->
@@ -160,7 +172,7 @@
                 </div>
             </div>
         </div>
-        <div class="flexContainerFooter footerRow">
+        <div class="flexContainerFooter flexContainerTopFooter footerRow">
             <div class="flexFooterItem footerMainParagraph flexFooterItemBig">
                 <div class="flexFooterItemInner">
                     <p>Offering unforgettable trips to explore planets in our solar system.</p>
@@ -170,38 +182,39 @@
                 <div class="flexFooterItemInner">
                     <a href="index.html">Home</a>
                     <a href="pages/about.html">Flights</a>
-                    <a href="pages/contact.html">Contact</a>
+                    <a href="pages/contact.html">Contact Us</a>
                 </div>
             </div>
             <div class="flexFooterItem flexFooterItemBig">
                 <div class="flexContainerSocials footerSocial flexFooterItemBig">
                     <div class="flexSocialsItem">
                         <div class="flexFooterItemInner">
-                            <img src="assets/images/smInstagram.png">
+                            <a href="#"><img src="assets/images/smInstagram.png"></a>
                         </div>
                     </div>
                     <div class="flexSocialsItem">
                         <div class="flexFooterItemInner">
-                            <img src="assets/images/smX.png">
+                            <a href="#"><img src="assets/images/smX.png"></a>
                         </div>
                     </div>
                     <div class="flexSocialsItem">
                         <div class="flexFooterItemInner">
-                            <img src="assets/images/smTicktock.png">
+                            <a href="#"><img src="assets/images/smTicktock.png"></a>
                         </div>
                     </div>
                     <div class="flexSocialsItem">
                         <div class="flexFooterItemInner">
-                            <img src="assets/images/smFacebook.png">
+                            <a href="#"><img src="assets/images/smFacebook.png"></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="flexContainerFooter footerRow">
+        <hr/>
+        <div class="flexContainerFooter footerRow footerRowBottom">
             <div class="flexFooterItem footerSubParagraph flexFooterItemBig">
                 <div class="flexFooterItemInner">
-                    <p>All Rights Reserved &copy; Open Window 2024</p>
+                    <p>All Rights Reserved @ Open Window 2024</p>
                 </div>
             </div>
             <div class="flexFooterItem flexFooterItemSmall">
@@ -211,8 +224,10 @@
             </div>
             <div class="flexFooterItem footerSubParagraph footerLinks flexFooterItemBig">
                 <div class="flexFooterItemInner">
-                    <a href="#">Terms &amp; Conditions</a>
-                    <a href="#">Privacy &amp; Policy</a>
+                    <p>
+                        <a href="#">Terms &amp; Conditions</a>
+                        <a href="#">Privacy &amp; Policy</a>
+                    </p>
                 </div>
             </div>
         </div>

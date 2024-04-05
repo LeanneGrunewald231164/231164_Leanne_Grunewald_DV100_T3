@@ -8,19 +8,248 @@
     <meta name="keywords" content="Red Planet Ventures, Solar System, Flight, Mars, Neptune, Jupiter, Saturn, Planets, Space, Tourism, Holiday, Vacation, Shuttle, Red Planet, Trip">
     <meta name="author" content="Leanne Grunewald 231164">
 
-    <title>HTML Template</title>
+    <title>Home of Red Planet Ventures</title>
 
     <!--link bootstrap
         link javascript
         link Google Font files
         link CSS-->
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 
 </head>
+<body class="flightsPage">
+    <!-- NAV -->
+    <!-- Let nav stay anchored at the top? -->
+    <nav>
+        <div class="navInner">
+            <div class="flexContainerNav">
+                <div class="flexNavItem">
+                    <a href="index.html"><img class="navLogo" src="assets/images/logo.png"></a>
+                </div>
+                <div class="flexNavItem">
+                        <a class="activeNav navLink" href="index.html">Home</a>
+                        <a class="navLink" href="pages/flights.html">Flights</a>
+                        <a class="navLink" href="pages/contact.html">Contact</a>
+                    </ul>
+                </div>
+                <div class="flexNavItem">
+                    <!-- As hierdie als spans eerder is? -->
+                    <!-- Check al die padding -->
+                    <div class="flexContainerNavSearch">
+                        <div class="flexNavSearchItem flexNavSearchItemSearchPic">
+                            <!--&#128269;-->
+                            <span><img src="../assets/images/search.png" ></span>
+                        </div>
+                        <div class="flexNavSearchItem">
+                            <form>
+                                <input type="text" placeholder="Search" />
+                            </form>
+                        </div>
+                        <div class="flexNavSearchItem flexNavSearchItemBasketPic">
+                            <!--&#129530;-->
+                            <span><img src="../assets/images/basket.png" ></span>
+                            <span class="cartItemsAmount">2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
+    <!-- HEADER -->
+    <header>
+        <img src="../assets/images/headerbackBack.png">
+        <div class="headerTextContainer">
+            <h1>Book A Flight</h1>
+        </div>
+        <div class="headerFilterContainer">
+            <div class="flexContainerHeaderFilterContainer">
+                <div class="flexHeaderFilterContainerItem">
+                    <div class="flexHeaderFilterContainerItemInner flexHeaderFilterContainerItemInnerLeft">
+                        <span class="flexHeaderFilterContainerItemInnerLeftInner"><img src="" ></span>
+                        <span class="flexHeaderFilterContainerItemInnerLeftInner"><p>Filter</p></span>
+                        <span class="flexHeaderFilterContainerItemInnerLeftInner"><img src="" ></span>
+                        <span class="flexHeaderFilterContainerItemInnerLeftInner"><img src="" ></span>
+                        <span class="flexHeaderFilterContainerItemInnerLeftInner"><p>Showing 1-16 of 32 results</p></span>
+                    </div>
+                </div>
+                <div class="flexHeaderFilterContainerItem">
+                    <div class="flexHeaderFilterContainerItemInner flexHeaderFilterContainerItemInnerRight">
+                        <span class="flexHeaderFilterContainerItemInnerLeftInner"><p>Show</p></span>
+                        <span class="flexHeaderFilterContainerItemInnerLeftInner"><p><span>6</span></p></span>
+                        <span class="flexHeaderFilterContainerItemInnerLeftInner"><p>Short by</p></span>
+                        <span class="flexHeaderFilterContainerItemInnerLeftInner"><p><span>Default</span></p></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
- <!-- IN PROGRESS, ADD SOCIAL MEDIA, HEADINGS, FLEX, FORM-->
- <section>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.32135615912!2d28.206956676280782!3d-25.891804351325632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956608911ce097%3A0x519896b4b6eda40a!2sOpen%20Window%20-%20Centurion!5e0!3m2!1sen!2sza!4v1710337608406!5m2!1sen!2sza" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</section>
+    <!-- FLIGHTS -->
+    <section class="flights flightsWhite">
+        <div class="flexContainerFlights">
+            <div class="flexFlightsItem">
+                <div class="flexFlightsItemInner flexFlightsItemInnerLeft">
+                    <div class="flexFlightsItemInnerLeftInner">
+                        <img class="" src="../assets/images/flighhtMars.png" >
+                    </div>
+                </div>
+            </div>
+            <div class="flexFlightsItem">
+                <div class="flexFlightsItemInner flexFlightsItemInnerRight">
+                    <div class="flexFlightsItemInnerRightInner">
+                        <h2>The Classic Mars Experience</h2>
+                        <div class="flexFlightsItemInnerRightInnerInner">
+                            <h3 class="flexFlightsItemInnerRightInnerInnerPrice">R 25,000.00</h3>
+                            <h3 class="flexFlightsItemInnerRightInnerInnerPriceOld">R 25,000.00</h3>
+                        </div>
+                        <div class="flexFlightsItemInnerRightInnerInner">
+                            <span><img class="" src="" ></span>
+                            <span><img class="" src="" ></span>
+                            <span><img class="" src="" ></span>
+                            <span><img class="" src="" ></span>
+                            <span><img class="" src="" ></span>
+                            <p class="flexFlightsItemInnerRightInnerInnerReview">36 Customer Review</p>
+                        </div>
+                        <p>Embark on a Mars vacation: red deserts, ancient relics, and towering canyons await. Enjoy low-gravity hiking, rover trips to Olympus Mons, and stargazing under Phobos and Deimos. Unforgettable adventures beckon on the rust-colored landscapes of the Red Planet. </p>
+                        <div class="flexFlightsItemInnerRightInnerInner">
+                            <button class="buttonAmount" type="button" onclick="location.href = 'pages/contact.html';">- 1 +</button>
+                            <button class="buttonBookNow" type="button" onclick="location.href = 'pages/contact.html';">Book Now</button>
+                        </div>
+                        <hr/>
+                        <div class="flexFlightsItemInnerRightInnerInner">
+                            <div class="flexFlightsItemInnerRightInnerInnerDetails">
+                                <p class="flexFlightsItemInnerRightInnerInnerDetailsRow flexFlightsItemInnerRightInnerInnerDetailsRowLeft">
+                                    SKU
+                                </p>
+                                <p class="flexFlightsItemInnerRightInnerInnerDetailsRow flexFlightsItemInnerRightInnerInnerDetailsRowMiddle">
+                                    :
+                                </p>
+                                <p class="flexFlightsItemInnerRightInnerInnerDetailsRow flexFlightsItemInnerRightInnerInnerDetailsRowRight">
+                                    SS001
+                                </p>
+                            </div>
+                            <div class="flexFlightsItemInnerRightInnerInnerDetails">
+                                <p class="flexFlightsItemInnerRightInnerInnerDetailsRow flexFlightsItemInnerRightInnerInnerDetailsRowLeft">
+                                    Shuttle
+                                </p>
+                                <p class="flexFlightsItemInnerRightInnerInnerDetailsRow flexFlightsItemInnerRightInnerInnerDetailsRowMiddle">
+                                    :
+                                </p>
+                                <p class="flexFlightsItemInnerRightInnerInnerDetailsRow flexFlightsItemInnerRightInnerInnerDetailsRowRight">
+                                    The Opulence
+                                </p>
+                            </div>
+                            <div class="flexFlightsItemInnerRightInnerInnerDetails">
+                                <p class="flexFlightsItemInnerRightInnerInnerDetailsRow flexFlightsItemInnerRightInnerInnerDetailsRowLeft">
+                                    Tags
+                                </p>
+                                <p class="flexFlightsItemInnerRightInnerInnerDetailsRow flexFlightsItemInnerRightInnerInnerDetailsRowMiddle">
+                                    :
+                                </p>
+                                <p class="flexFlightsItemInnerRightInnerInnerDetailsRow flexFlightsItemInnerRightInnerInnerDetailsRowRight">
+                                    Mars, Luxury, Sale
+                                </p>
+                            </div>
+                            <div class="flexFlightsItemInnerRightInnerInnerDetails">
+                                <p class="flexFlightsItemInnerRightInnerInnerDetailsRow flexFlightsItemInnerRightInnerInnerDetailsRowLeft">
+                                    Date
+                                </p>
+                                <p class="flexFlightsItemInnerRightInnerInnerDetailsRow flexFlightsItemInnerRightInnerInnerDetailsRowMiddle">
+                                    :
+                                </p>
+                                <p class="flexFlightsItemInnerRightInnerInnerDetailsRow flexFlightsItemInnerRightInnerInnerDetailsRowRight">
+                                    16 June - 19 July
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer>
+        <!-- FLEX WRAP ALS IN EEN RY? -->
+        <div class="flexContainerFooter footerRow">
+            <div class="flexFooterItem footerLogo flexFooterItemBig">
+                <div class="flexFooterItemInner">
+                    <img src="assets/images/logo.png">
+                </div>
+            </div>
+            <div class="flexFooterItem footerHeading flexFooterItemSmall">
+                <div class="flexFooterItemInner">
+                    <h6>Company</h6>
+                </div>
+            </div>
+            <div class="flexFooterItem footerHeading flexFooterItemBig">
+                <div class="flexFooterItemInner">
+                    <h6>Social Media Links</h6>
+                </div>
+            </div>
+        </div>
+        <div class="flexContainerFooter flexContainerTopFooter footerRow">
+            <div class="flexFooterItem footerMainParagraph flexFooterItemBig">
+                <div class="flexFooterItemInner">
+                    <p>Offering unforgettable trips to explore planets in our solar system.</p>
+                </div>
+            </div>
+            <div class="flexFooterItem footerMenu flexFooterItemSmall">
+                <div class="flexFooterItemInner">
+                    <a href="index.html">Home</a>
+                    <a href="pages/about.html">Flights</a>
+                    <a href="pages/contact.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="flexFooterItem flexFooterItemBig">
+                <div class="flexContainerSocials footerSocial flexFooterItemBig">
+                    <div class="flexSocialsItem">
+                        <div class="flexFooterItemInner">
+                            <a href="#"><img src="assets/images/smInstagram.png"></a>
+                        </div>
+                    </div>
+                    <div class="flexSocialsItem">
+                        <div class="flexFooterItemInner">
+                            <a href="#"><img src="assets/images/smX.png"></a>
+                        </div>
+                    </div>
+                    <div class="flexSocialsItem">
+                        <div class="flexFooterItemInner">
+                            <a href="#"><img src="assets/images/smTicktock.png"></a>
+                        </div>
+                    </div>
+                    <div class="flexSocialsItem">
+                        <div class="flexFooterItemInner">
+                            <a href="#"><img src="assets/images/smFacebook.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="flexContainerFooter footerRow footerRowBottom">
+            <div class="flexFooterItem footerSubParagraph flexFooterItemBig">
+                <div class="flexFooterItemInner">
+                    <p>All Rights Reserved @ Open Window 2024</p>
+                </div>
+            </div>
+            <div class="flexFooterItem flexFooterItemSmall">
+                <div class="flexFooterItemInner">
+
+                </div>
+            </div>
+            <div class="flexFooterItem footerSubParagraph footerLinks flexFooterItemBig">
+                <div class="flexFooterItemInner">
+                    <p>
+                        <a href="#">Terms &amp; Conditions</a>
+                        <a href="#">Privacy &amp; Policy</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

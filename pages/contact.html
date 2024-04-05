@@ -8,7 +8,7 @@
     <meta name="keywords" content="Red Planet Ventures, Solar System, Flight, Mars, Neptune, Jupiter, Saturn, Planets, Space, Tourism, Holiday, Vacation, Shuttle, Red Planet, Trip">
     <meta name="author" content="Leanne Grunewald 231164">
 
-    <title>HTML Template</title>
+    <title>Home of Red Planet Ventures</title>
 
     <!--link bootstrap
         link javascript
@@ -18,3 +18,224 @@
     <link rel="stylesheet" href="css/main.css">
 
 </head>
+<body>
+    <!-- NAV -->
+    <!-- Let nav stay anchored at the top? -->
+    <nav>
+        <div class="navInner">
+            <div class="flexContainerNav">
+                <div class="flexNavItem">
+                    <a href="index.html"><img class="navLogo" src="assets/images/logo.png"></a>
+                </div>
+                <div class="flexNavItem">
+                        <a class="activeNav navLink" href="index.html">Home</a>
+                        <a class="navLink" href="pages/flights.html">Flights</a>
+                        <a class="navLink" href="pages/contact.html">Contact</a>
+                    </ul>
+                </div>
+                <div class="flexNavItem">
+                    <!-- As hierdie als spans eerder is? -->
+                    <!-- Check al die padding -->
+                    <div class="flexContainerNavSearch">
+                        <div class="flexNavSearchItem flexNavSearchItemSearchPic">
+                            <!--&#128269;-->
+                            <span><img src="assets/images/search.png" ></span>
+                        </div>
+                        <div class="flexNavSearchItem">
+                            <form>
+                                <input type="text" placeholder="Search" />
+                            </form>
+                        </div>
+                        <div class="flexNavSearchItem flexNavSearchItemBasketPic">
+                            <!--&#129530;-->
+                            <span><img src="assets/images/basket.png" ></span>
+                            <span class="cartItemsAmount">2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+        <img src="../assets/images/headerbackBack.png">
+        <div class="headerTextContainer">
+            <h1>Contact Us</h1>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <div class="flexContainerAbout">
+            <div class="flexAboutItem">
+                <div class="flexAboutItemInner flexAboutItemInnerLeft">
+                    <div class="flexAboutItemInnerLeftInner">
+                        <h4>About</h4>
+                        <h2>Red Planet Ventures</h2>
+                        <p>Welcome to Red Planet Ventures, where we are dedicated to turning dreams of interplanetary exploration into exhilarating realities. As a premier provider of space tourism experiences, we specialize in crafting meticulously curated journeys to the diverse planets within our solar system. From the rugged terrain of Mars to the majestic rings of Saturn, our expertly designed trips offer unparalleled opportunities for discovery and adventure. With a commitment to safety, innovation, and customer satisfaction, we strive to exceed expectations and leave a lasting impression on every traveler who embarks on a voyage with us. Join us as we push the boundaries of exploration and unlock the mysteries of the cosmos with Red Planet Ventures. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flexAboutItem">
+                <div class="flexAboutItemInner flexAboutItemInnerRight">
+                    <div class="flexAboutItemInnerRightInner">
+                        <img src="../assets/images/contactImage.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+        <div class="flexContainerContact">
+            <div class="flexContactItem">
+                <div class="flexContactItemInner flexContactItemInnerLeft">
+                    <div class="flexContactItemInnerLeftInner">
+                        <h4>Contact Us Through Our</h4>
+                        <h2>Social Media Pages</h2>
+                        <div class="flexContainerContactSocials">
+                            <div class="flexContactSocialsItem">
+                                <div class="flexContactSocialsItemInner">
+                                    <img src="../assets/images/smInstagram.png">
+                                </div>
+                            </div>
+                            <div class="flexContactSocialsItem">
+                                <div class="flexContactSocialsItemInner">
+                                    <img src="../assets/images/smX.png">
+                                </div>
+                            </div>
+                            <div class="flexContactSocialsItem">
+                                <div class="flexContactSocialsItemInner">
+                                    <img src="../assets/images/smTicktock.png">
+                                </div>
+                            </div>
+                            <div class="flexContactSocialsItem">
+                                <div class="flexContactSocialsItemInner">
+                                    <img src="../assets/images/smFacebook.png">
+                                </div>
+                            </div>
+                        </div>
+                        <h4>Or vistit us at our</h4>
+                        <h2>Physical Location</h2>
+                        <div class="flexContactMap">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.32135615912!2d28.206956676280782!3d-25.891804351325632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956608911ce097%3A0x519896b4b6eda40a!2sOpen%20Window%20-%20Centurion!5e0!3m2!1sen!2sza!4v1710337608406!5m2!1sen!2sza" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flexContactItem">
+                <div class="flexContactItemInner flexContactItemInnerRight">
+                    <div class="flexContactItemInnerRightInner">
+                        <form id="contact">
+                            <h2>Send Us A Message</h2>
+                            <fieldset>
+                                <p>Your name</p>
+                                <input placeholder="Abc" type="text" tabindex="1" required>
+                            </fieldset>
+                            <fieldset>
+                                <p>Email address</p>
+                                <input placeholder="Abc@def.com" type="email" tabindex="2" required>
+                            </fieldset>
+                            <fieldset>
+                                <p>Subject</p>
+                                <input placeholder="This is an optional" type="text" tabindex="3">
+                            </fieldset>
+                            <fieldset>
+                                <p>Message</p>
+                                <textarea placeholder="Hi! i'd like to ask about" tabindex="4"></textarea> 
+                            </fieldset>
+                            <fieldset>
+                                <button name="submitButton" type="submit" id="contactUsSubmit" tabindex="5">Submit</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <!--FOOTER-->
+    <footer>
+        <!-- FLEX WRAP ALS IN EEN RY? -->
+        <div class="flexContainerFooter footerRow">
+            <div class="flexFooterItem footerLogo flexFooterItemBig">
+                <div class="flexFooterItemInner">
+                    <img src="assets/images/logo.png">
+                </div>
+            </div>
+            <div class="flexFooterItem footerHeading flexFooterItemSmall">
+                <div class="flexFooterItemInner">
+                    <h6>Company</h6>
+                </div>
+            </div>
+            <div class="flexFooterItem footerHeading flexFooterItemBig">
+                <div class="flexFooterItemInner">
+                    <h6>Social Media Links</h6>
+                </div>
+            </div>
+        </div>
+        <div class="flexContainerFooter flexContainerTopFooter footerRow">
+            <div class="flexFooterItem footerMainParagraph flexFooterItemBig">
+                <div class="flexFooterItemInner">
+                    <p>Offering unforgettable trips to explore planets in our solar system.</p>
+                </div>
+            </div>
+            <div class="flexFooterItem footerMenu flexFooterItemSmall">
+                <div class="flexFooterItemInner">
+                    <a href="index.html">Home</a>
+                    <a href="pages/about.html">Flights</a>
+                    <a href="pages/contact.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="flexFooterItem flexFooterItemBig">
+                <div class="flexContainerSocials footerSocial flexFooterItemBig">
+                    <div class="flexSocialsItem">
+                        <div class="flexFooterItemInner">
+                            <a href="#"><img src="assets/images/smInstagram.png"></a>
+                        </div>
+                    </div>
+                    <div class="flexSocialsItem">
+                        <div class="flexFooterItemInner">
+                            <a href="#"><img src="assets/images/smX.png"></a>
+                        </div>
+                    </div>
+                    <div class="flexSocialsItem">
+                        <div class="flexFooterItemInner">
+                            <a href="#"><img src="assets/images/smTicktock.png"></a>
+                        </div>
+                    </div>
+                    <div class="flexSocialsItem">
+                        <div class="flexFooterItemInner">
+                            <a href="#"><img src="assets/images/smFacebook.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="flexContainerFooter footerRow footerRowBottom">
+            <div class="flexFooterItem footerSubParagraph flexFooterItemBig">
+                <div class="flexFooterItemInner">
+                    <p>All Rights Reserved @ Open Window 2024</p>
+                </div>
+            </div>
+            <div class="flexFooterItem flexFooterItemSmall">
+                <div class="flexFooterItemInner">
+
+                </div>
+            </div>
+            <div class="flexFooterItem footerSubParagraph footerLinks flexFooterItemBig">
+                <div class="flexFooterItemInner">
+                    <p>
+                        <a href="#">Terms &amp; Conditions</a>
+                        <a href="#">Privacy &amp; Policy</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
