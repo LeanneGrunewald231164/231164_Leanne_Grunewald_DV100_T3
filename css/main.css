@@ -194,6 +194,7 @@ nav .navInner {
 
 }
 
+/** INDEX **/
 /** HEADER **/
 header {
 
@@ -747,6 +748,356 @@ footer hr {
 }
 
 
+
+
+
+
+
+
+
+
+
+/** FLIGHTS **/
+/** HEADER **/
+.flightsPage header.backgroundImage, 
+.contactPage header.backgroundImage  {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    background-image: url('../assets/images/headerbackBack.png');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.flightsPage header.backgroundImage .headerTextContainer, 
+.contactPage header.backgroundImage .headerTextContainer {
+    text-align: center;
+    top: 35%;
+    position: relative;
+}
+
+.flightsPage header.backgroundImage .headerTextContainer h1,
+.contactPage header.backgroundImage .headerTextContainer h1 {
+    font-family: Porter_Sans_Block;
+    text-transform: uppercase;
+    font-size: 48px;
+    width: 100%;
+    color: #ffffff;
+    margin-bottom: 0px;
+    margin-left: 0%;
+}
+
+.flightsPage header.backgroundImage .headerFilterContainer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background: #45016E;
+}
+
+.flightsPage header.backgroundImage .headerFilterContainer .flexContainerHeaderFilterContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flightsPage header.backgroundImage .headerFilterContainer .flexContainerHeaderFilterContainer .flexHeaderFilterContainerItem {
+    flex: 50%;
+}
+
+
+
+
+header.backgroundImage img {
+
+    width: auto;
+    height: auto;
+
+}
+
+
+/** FLIGHTS **/
+/** TRIP BOOKER **/
+.flights.flightsWhite {
+
+    background: #ffffff;
+    
+}
+
+.flights.flightsPurple {
+
+    background: #45016E;
+    
+}
+
+.flights .flexContainerFlights {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.flights .flexContainerFlights .flexFlightsItem {
+    flex: 50%;
+    position: relative;
+}
+
+.flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerLeft {
+
+    text-align: right;
+    width: 100%;
+    padding: 7% 4%;
+
+}
+
+.flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerLeft .flexFlightsItemInnerLeftInner {
+
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 609px;
+
+}
+
+.flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerLeft .flexFlightsItemInnerLeftInner .img {
+
+    width: 100%;
+
+}
+
+.flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight {
+
+    text-align: left;
+    width: 100%;
+    padding: 7% 4%;
+
+}
+
+.flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner {
+
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 609px;
+
+}
+
+.flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner h2 {
+
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: poppins_bold;
+    font-size: 48px;
+    line-height: 65px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerRight .flexTripBookerItemInnerRightInner p {
+
+    color: #ffffff;
+    font-weight: 200;
+    font-family: poppins_regular;
+    font-size: 18px;
+    margin-top: 0px;
+    line-height: 30px;
+    width: 80%;
+
+}
+
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerRight .flexTripBookerItemInnerRightInner .buttonBookNow {
+
+    color: #ffffff;
+    background-color: #E61729;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 12px;
+    padding: 20px;
+    width: 270px;
+    height: 70px;
+    font-family: poppins_semi_bold;
+    border: none;
+    margin-top: 20px;
+
+}
+
+
+
+
+/** CONTACT **/
+/** HEADER **/
+
+
+/** ABOUT **/
+.about .flexContainerAbout {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.about .flexContainerAbout .flexAboutItem {
+    flex: 50%;
+    position: relative;
+}
+
+.about .flexContainerAbout .flexAboutItem .flexAboutItemInner.flexAboutItemInnerLeft {
+    text-align: right;
+    width: 100%;
+    padding: 7% 4%;
+}
+
+.about .flexContainerAbout .flexAboutItem .flexAboutItemInner.flexAboutItemInnerLeft .flexAboutItemInnerLeftInner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 609px;
+}
+
+.about .flexContainerAbout .flexAboutItem .flexAboutItemInner.flexAboutItemInnerLeft .flexAboutItemInnerLeftInner h4 {
+    text-align: left;
+    color: #53bfdb;
+    text-transform: uppercase;
+    font-family: poppins_medium;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.about .flexContainerAbout .flexAboutItem .flexAboutItemInner.flexAboutItemInnerLeft .flexAboutItemInnerLeftInner h2 {
+    text-align: left;
+    color: #45016E;
+    font-weight: 800;
+    font-family: poppins_bold;
+    font-size: 48px;
+    line-height: 65px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about .flexContainerAbout .flexAboutItem .flexAboutItemInner.flexAboutItemInnerLeft .flexAboutItemInnerLeftInner p {
+    text-align: left;
+    color: #333333;
+    font-weight: 200;
+    font-family: poppins_regular;
+    font-size: 18px;
+    margin-top: 0px;
+    line-height: 30px;
+    width: 75%;
+}
+
+.about .flexContainerAbout .flexAboutItem .flexAboutItemInner.flexAboutItemInnerRight {
+    text-align: left;
+    width: 100%;
+    padding: 7% 4%;
+}
+
+.about .flexContainerAbout .flexAboutItem .flexAboutItemInner.flexAboutItemInnerRight .flexAboutItemInnerRightInner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 609px;
+}
+
+.about .flexContainerAbout .flexAboutItem .flexAboutItemInner.flexAboutItemInnerRight .flexAboutItemInnerRightInner img {
+    width: 100%;
+}
+
+
+/** CONTACT **/
+.contact .flexContainerContact {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.contact .flexContainerContact .flexContactItem {
+
+    flex: 50%;
+
+}
+
+.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerLeft {
+
+
+
+}
+
+.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerLeft .flexContactItemInnerLeftInner {
+
+
+
+}
+
+.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerLeft .flexContactItemInnerLeftInner h4 {
+
+    text-align: left;
+    color: #53bfdb;
+    text-transform: uppercase;
+    font-family: poppins_medium;
+    font-size: 18px;
+    margin-bottom: 0px;
+
+}
+
+.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerLeft .flexContactItemInnerLeftInner h2 {
+
+    text-align: left;
+    color: #45016E;
+    font-weight: 800;
+    font-family: poppins_bold;
+    font-size: 48px;
+    line-height: 65px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerLeft .flexContactItemInnerLeftInner .flexContainerContactSocials  {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerLeft .flexContactItemInnerLeftInner .flexContainerContactSocials .flexContactSocialsItem {
+
+    flex: 25%;
+
+}
+
+.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerLeft .flexContactItemInnerLeftInner .flexContainerContactSocials .flexContactSocialsItem .flexContactSocialsItemInner {
+
+
+
+}
+
+.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerLeft .flexContactItemInnerLeftInner .flexContainerContactSocials .flexContactSocialsItem .flexContactSocialsItemInner img {
+
+    width: 77px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
 .flexContainerNav {
     display: flex;
@@ -789,15 +1140,7 @@ footer hr {
 
 
 
-.backgroundImage {
-    width: 100%;
-    height: 500px;
-    text-align: center;
-    background-image: url('../assets/images/headerbackBack.png');
-    background-size: cover;
-    background-position: center;
-    color: #ffffff;
-}
+
 
 
 .flexContainerShuttle {
