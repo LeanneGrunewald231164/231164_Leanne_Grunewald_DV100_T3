@@ -8,9 +8,7 @@ body {
     margin: 0;
 
 
-    width: 1440px;
-    margin: 0 auto;
-    display: block;
+    
 }
 
 @font-face {
@@ -1444,13 +1442,18 @@ header.backgroundImage img {
 
 .contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerLeft {
 
-
+    text-align: right;
+    width: 100%;
+    padding: 7% 4%;
 
 }
 
 .contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerLeft .flexContactItemInnerLeftInner {
 
-
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 609px;
 
 }
 
@@ -1479,12 +1482,22 @@ header.backgroundImage img {
 
 }
 
+.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerLeft .flexContactItemInnerLeftInner .flexContactMap {
+
+    text-align: left;
+
+}
+
+.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerLeft .flexContactItemInnerLeftInner {
+
+}
+
 .contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerLeft .flexContactItemInnerLeftInner .flexContainerContactSocials  {
 
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 60%;
+    width: 70%;
     margin-bottom: 15%;
 
 }
@@ -1513,9 +1526,23 @@ header.backgroundImage img {
 
 }
 
-.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerLeft .flexContactItemInnerLeftInner .flexContactMap iframe {
+.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerRight  {
 
-    border-radius: 30px;
+    text-align: left;
+    width: 70%;
+    padding: 7% 4%;
+
+}
+
+.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerRight .flexContactItemInnerRightInner {
+
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+}
+
+.contact .flexContainerContact .flexContactItem .flexContactItemInner.flexContactItemInnerRight .flexContactItemInnerRightInner {
 
 }
 
