@@ -1,4 +1,6 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -112,6 +114,30 @@ nav .navInner {
     margin-right: 2em;
     font-weight: 400;
     font-size: 20px;
+    position: relative;
+
+}
+  
+.flexContainerNav .flexNavItem .navLink::before {
+    
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    bottom: -4px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+
+}
+  
+.flexContainerNav .flexNavItem .navLink:hover::before {
+
+    transform-origin: left;
+    transform: scaleX(1);
 
 }
 
@@ -124,6 +150,12 @@ nav .navInner {
 .flexContainerNav .flexNavItem .navLink.activeNav {
 
     color: #E61729;
+
+}
+
+.flexContainerNav .flexNavItem .navLink.activeNav::before {
+    
+    height: 0px;
 
 }
 
@@ -506,14 +538,46 @@ header .headerTextContainer h3 {
     display: inline-block;
     width: 100%;
     max-width: 609px;
+    overflow: hidden;
+    border-radius: 35px;
+}
+
+.shuttle .flexContainerShuttle .flexShuttleItem .flexShuttleItemInner.flexShuttleItemInnerRight .flexShuttleItemInnerRightInner::before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	transform: skewX(-25deg);
+}
+
+.shuttle .flexContainerShuttle .flexShuttleItem .flexShuttleItemInner.flexShuttleItemInnerRight .flexShuttleItemInnerRightInner:hover::before {
+	animation: shine .75s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
 }
 
 .shuttle .flexContainerShuttle .flexShuttleItem .flexShuttleItemInner.flexShuttleItemInnerRight .flexShuttleItemInnerRightInner img {
     width: 100%;
+	transform: scale(1);
+	transition: .3s ease-in-out;
 }
 
 .shuttle .flexContainerShuttle .flexShuttleItem .flexShuttleItemInner.flexShuttleItemInnerRight .flexShuttleItemInnerRightInner:hover img {
-    filter: grayscale(80%);
+    /**filter: grayscale(80%);**/
+	transform: scale(1.3);
 }
 
 
@@ -1624,4 +1688,103 @@ header.backgroundImage img {
     background-color: #ffffff;
     cursor: pointer;
 }
+
+
+/** ABOUT US PAGE **/
+
+/** NAV **/
+
+.aboutPage .navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.aboutPage .navInner .navbar-brand {
+    margin-left: 2em;
+}
+
+.aboutPage .navInner .navbar-brand .navLogo {
+    width: 266px;
+}
+
+.aboutPage .navInner .flexContainerNavSearch {
+    background: #ffffff;
+    border-radius: 10px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-right: 2em;
+}
+
+.aboutPage .navInner .flexContainerNavSearch .flexNavSearchItem {
+    position: relative;
+}
+
+.aboutPage .navInner .flexContainerNavSearch .flexNavSearchItem.flexNavSearchItemSearchPic img {
+    position: relative;
+    top: 2px;
+    margin-left: 4%;
+    width: 35px;
+}
+
+.aboutPage .navInner .flexContainerNavSearch .flexNavSearchItem form input {
+    border: 0px;
+    border-right: 2px solid #999999;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.aboutPage .navInner .flexContainerNavSearch .flexNavSearchItem.flexNavSearchItemBasketPic img {
+    padding: 5px 10px 5px 10px;
+    position: relative;
+    top: 2px;
+}
+
+.aboutPage .navInner .flexContainerNavSearch .flexNavSearchItem.flexNavSearchItemBasketPic .cartItemsAmount {
+    position: absolute;
+    border-radius: 50px;
+    background-color: #f54b4c;
+    color: #ffffff;
+    padding: 5px 13px;
+    font-size: 16px;
+    top: -28px;
+    right: -25px;
+}
+
+/** HEADER **/
+
+.aboutPage .backgroundImage {
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    background-image: url(../assets/images/headerbackBack.png);
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.aboutPage .backgroundImage .headerTextContainer {
+    text-align: center;
+    top: 50%;
+    position: relative;
+}
+
+.aboutPage .backgroundImage .headerTextContainer h1 {
+    font-family: Porter_Sans_Block;
+    text-transform: uppercase;
+    font-size: 48px;
+    width: 100%;
+    color: #ffffff;
+    margin-bottom: 0px;
+    margin-left: 0%;
+}
+
 
