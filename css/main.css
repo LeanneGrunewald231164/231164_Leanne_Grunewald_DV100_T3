@@ -98,13 +98,38 @@ nav .navInner {
 .flexContainerNav .flexNavItem .navLogo {
 
     width: 266px;
+    transform: scale(1);
+	transition: .3s ease-in-out;
 
 }
 
 .flexContainerNav .flexNavItem .navLogo:hover {
 
-    filter: contrast(0.5);
+    /**filter: contrast(0.5);**/
+    transform: scale(1.1);
 
+}
+
+.flexContainerNav .flexNavItem.flexNavItemImage {
+    overflow: hidden;
+    position: relative;
+}
+
+.flexContainerNav .flexNavItem.flexNavItemImage a::before {
+	position: absolute;
+	top: 0;
+	left: -70%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 40%;
+	height: 100%;
+	background: linear-gradient(to right, rgba(230,23,41,0) 0%, rgba(230,23,41,.4) 100%);
+	transform: skewX(-30deg);
+}
+
+.flexContainerNav .flexNavItem.flexNavItemImage a:hover::before {
+	animation: sheem .8s;
 }
 
 .flexContainerNav .flexNavItem .navLink {
@@ -850,18 +875,49 @@ footer hr {
 
 
 
-
 .flexContainerFooter .flexFooterItem.footerLogo img {
 
     width: 266px;
+    transform: scale(1);
+	transition: .3s ease-in-out;
+
+}
+
+.flexContainerFooter .flexFooterItem.footerLogo img:hover {
+
+    transform: scale(1.1);
 
 }
 
 .flexContainerFooter .flexFooterItem.footerLogo:hover img {
 
-    filter: contrast(0.5);
+    /**filter: contrast(0.5);**/
 
 }
+
+.flexContainerFooter .flexFooterItem.footerLogo .flexFooterItemInner {
+    overflow: hidden;
+    position: relative;
+}
+
+.flexContainerFooter .flexFooterItem.footerLogo .flexFooterItemInner a::before {
+	position: absolute;
+	top: 0;
+	left: -70%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 40%;
+	height: 100%;
+	background: linear-gradient(to right, rgba(230,23,41,0) 0%, rgba(230,23,41,.4) 100%);
+	transform: skewX(-30deg);
+}
+
+.flexContainerFooter .flexFooterItem.footerLogo .flexFooterItemInner a:hover::before {
+	animation: sheem .8s;
+}
+
+
 
 .flexContainerFooter .flexFooterItem.footerHeading h6 {
 
@@ -1779,7 +1835,7 @@ header.backgroundImage img {
 }
 
 
-/** HISTORY **/
+/** HISTORY AND GOALS **/
 
 .aboutPage .containerTextImage h5 {
 
@@ -1794,3 +1850,35 @@ header.backgroundImage img {
     font-family: poppins_bold;
 
 }
+
+.aboutPage .containerTextImage p {
+
+    font-family: poppins_regular;
+
+}
+
+.aboutPage .containerTextImage ol {
+
+    font-family: poppins_regular;
+
+}
+
+.aboutPage .colTextImageInnerRight {
+
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50px;
+
+}
+
+.aboutPage .containerTextImage img {
+
+    transform: translateX(-50%);
+    height: 100%;
+    position: relative;
+    left: 50%;
+
+}
+
+
+
