@@ -1779,3 +1779,18 @@ header.backgroundImage img {
 }
 
 
+/** HISTORY **/
+
+.aboutPage .containerTextImage h5 {
+
+    color: #53bfdb;
+    font-family: poppins_medium;
+
+}
+
+.aboutPage .containerTextImage h2 {
+
+    color: #45016E;
+    font-family: poppins_bold;
+
+}
