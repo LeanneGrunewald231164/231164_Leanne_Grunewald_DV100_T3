@@ -20,13 +20,14 @@
         <nav>
             <div class="navInner">
                 <div class="flexContainerNav">
-                    <div class="flexNavItem">
+                    <div class="flexNavItem flexNavItemImage">
                         <a href="../index.html"><img class="navLogo" src="../assets/images/logo.png"></a>
                     </div>
                     <div class="flexNavItem">
                             <a class="navLink" href="../index.html">Home</a>
                             <a class="activeNav navLink" href="flights.html">Flights</a>
                             <a class="navLink" href="contact.html">Contact</a>
+                            <a class="navLink" href="about.html">About</a>
                         </ul>
                     </div>
                     <div class="flexNavItem">
@@ -676,8 +677,9 @@
             </div>
         </footer>
   
-        <!-- Modal -->
-        <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <!-- Full page Modal, as per Bootstrap documentation-->
+        <!-- ToDo: Apply styling and classes to Modal -->
+        <div class="modal fade" id="cartModal">
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -689,7 +691,7 @@
                             <div class="row">
                                 
                                 <div class="modalBodyFlights">
-
+                                    <!-- Content added via JavaScript -->
                                 </div>
 
                             </div>
@@ -697,6 +699,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue shopping</button>
+                        <!-- Check out button does not work yet -->
                         <button type="button" class="btn btn-primary">Check out</button>
                     </div>
                 </div>
