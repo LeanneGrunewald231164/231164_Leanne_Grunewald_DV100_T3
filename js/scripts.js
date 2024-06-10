@@ -1,4 +1,14 @@
 /** FLIGHTS **/
+const decAmount = document.querySelectorAll('.buttonAmount .buttonAmountLeft');
+decAmount.forEach(el => el.addEventListener('click', adjustFlightAmount));
+
+function adjustFlightAmount(event){
+
+  console.log(event.target.getAttribute("data-el"));
+
+}
+
+
 
 /** STILL IN PROGRESS **/
 
@@ -33,12 +43,18 @@ function getModalValues(){
   // Heading "row"
   let cartModalBodyContent = `
     
-    <div class="container-fluid">
-    <div class="row"><div class="col"><p>Name of Flight:</p></div>
-    <div class="col"><p>Amount of tickets:</p></div>
-    <div class="col"><p>Price per ticket:</p></div>
-    <div class="col"><p>Total of flight:</p></div></div>
-
+    <table class="table">
+    <thead>
+    <tr>
+    <th scope="col">Name of Flight</th>
+    <th scope="col">Amount of tickets</th>
+    <th scope="col">Price per ticket</th>
+    <th scope="col">Total of flight</th>
+    <th scope="col" colspan="3">Changes to flight</th>
+    </tr>
+    </thead>
+    <tbody>
+    
   `;
 
   // For each flight in the array
@@ -54,10 +70,15 @@ function getModalValues(){
     // As mentioned, uses Bootstrap grid for display, but can be changed to tables
     cartModalBodyContent += `
   
-      <div class="row"><div class="col"><p>${flightsInCart[i].flightName}</p></div>
-      <div class="col"><p>${flightsInCart[i].flightAmount}</p></div>
-      <div class="col"><p>R${flightsInCart[i].flightPrice}</p></div>
-      <div class="col"><p>R${flightsInCart[i].flightAmount * flightsInCart[i].flightPrice}</p></div></div>
+      <tr>
+      <th scope="row">${flightsInCart[i].flightName}</th>
+      <td>${flightsInCart[i].flightAmount}</td>
+      <td>R${flightsInCart[i].flightPrice}</td>
+      <td>R${flightsInCart[i].flightAmount * flightsInCart[i].flightPrice}</td>
+      <td><span>+</span></td>
+      <td><span>-</span></td>
+      <td><span>x</span></td>
+      </tr>
 
     `;
   }
@@ -65,17 +86,20 @@ function getModalValues(){
   // Final "row" with total
   cartModalBodyContent += `
   
-    <div class="row"><div class="col"><p>Final Total:</p></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"><p>R${flightTotal}</p></div></div>
+    </tbody>
+    <tfoot>
+    <th scope="row">Final Total:</th>
+    <td colspan="2"></td>
+    <td>R${flightTotal}</td>
+    <td colspan="3"></td>
+    </tfoot>
 
   `;
 
   // Final div to close container
   cartModalBodyContent += `
   
-    </div>
+    </table>
 
   `;
 
@@ -94,7 +118,7 @@ function getModalValues(){
 let form = document.forms["contact"];
 
 /** When form submits (event of submitting), call the getValues function */
-form.addEventListener("submit", getValues);
+//form.addEventListener("submit", getValues);
 
 function getValues(event){
 
