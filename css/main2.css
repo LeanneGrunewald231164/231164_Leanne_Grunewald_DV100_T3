@@ -39,6 +39,15 @@
 }
 
 
+/** ANIMATIONS **/
+
+@keyframes sheem {
+	100% {
+		left: 125%;
+	}
+}
+
+
 /** GENERAL **/
 
 * {
@@ -55,11 +64,13 @@ body {
 
 
 /** NAVIGATION **/
-nav {
+.navbar {
     position: relative;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
-nav .navInner {
+.navbar .navInner {
     position: absolute;
     top: 0px;
     width: 92%;
@@ -78,24 +89,44 @@ nav .navInner {
     left: 2%;
 }
 
-nav.navbar {
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-
-nav .navInner .navbar-brand {
+.navbar .navInner .navbar-brand {
     margin-left: 2em;
+    overflow: hidden;
+    position: relative;
 }
 
-nav .navInner .navbar-brand .navLogo {
+.navbar .navInner .navbar-brand::before {
+	position: absolute;
+	top: 0;
+	left: -70%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 40%;
+	height: 100%;
+	background: linear-gradient(to right, rgba(230,23,41,0) 0%, rgba(230,23,41,.4) 100%);
+	transform: skewX(-30deg);
+}
+
+.navbar .navInner .navbar-brand:hover::before {
+	animation: sheem .8s;
+}
+
+.navbar .navInner .navbar-brand .navLogo {
     width: 266px;
+    transform: scale(1);
+	transition: .3s ease-in-out;
 }
 
-nav.navbar .navbar-nav {
+.navbar .navInner .navbar-brand .navLogo:hover {
+    transform: scale(1.1);
+}
+
+.navbar .navInner .navbar-nav {
     margin: 0 auto;
 }
 
-nav .navInner .flexContainerNavSearch {
+.navbar .navInner .flexContainerNavSearch {
     background: #ffffff;
     border-radius: 10px;
     margin-top: 2%;
@@ -110,18 +141,18 @@ nav .navInner .flexContainerNavSearch {
     margin-right: 2em;
 }
 
-nav .navInner .flexContainerNavSearch .flexNavSearchItem {
+.navbar .navInner .flexContainerNavSearch .flexNavSearchItem {
     position: relative;
 }
 
-nav .navInner .flexContainerNavSearch .flexNavSearchItem.flexNavSearchItemSearchPic img {
+.navbar .navInner .flexContainerNavSearch .flexNavSearchItem.flexNavSearchItemSearchPic img {
     position: relative;
     top: 2px;
     margin-left: 4%;
     width: 35px;
 }
 
-nav .navInner .flexContainerNavSearch .flexNavSearchItem form input {
+.navbar .navInner .flexContainerNavSearch .flexNavSearchItem form input {
     border: 0px;
     border-right: 2px solid #999999;
     height: 100%;
@@ -130,13 +161,13 @@ nav .navInner .flexContainerNavSearch .flexNavSearchItem form input {
     color: #333333;
 }
 
-nav .navInner .flexContainerNavSearch .flexNavSearchItem.flexNavSearchItemBasketPic img {
+.navbar .navInner .flexContainerNavSearch .flexNavSearchItem.flexNavSearchItemBasketPic img {
     padding: 5px 10px 5px 10px;
     position: relative;
     top: 2px;
 }
 
-nav .navInner .flexContainerNavSearch .flexNavSearchItem.flexNavSearchItemBasketPic .cartItemsAmount {
+.navbar .navInner .flexContainerNavSearch .flexNavSearchItem.flexNavSearchItemBasketPic .cartItemsAmount {
     position: absolute;
     border-radius: 50px;
     background-color: #f54b4c;
@@ -146,6 +177,11 @@ nav .navInner .flexContainerNavSearch .flexNavSearchItem.flexNavSearchItemBasket
     top: -28px;
     right: -25px;
 }
+
+
+
+
+
 
 /** HEADER **/
 
