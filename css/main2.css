@@ -64,6 +64,7 @@ body {
 
 
 /** NAVIGATION **/
+
 .navbar {
     position: relative;
     padding-top: 0px;
@@ -79,7 +80,7 @@ body {
     margin-left: 2%;
     margin-right: 2%;
     border-radius: 40px;
-    margin-top: 1%;
+    margin-top: 1.5em;
     background: rgba(197, 178, 208, 0.8);
     z-index: 2;
 
@@ -126,23 +127,68 @@ body {
     margin: 0 auto;
 }
 
+.navbar .navInner .navbar-nav .nav-link {
+    text-decoration: none;
+    color: #333333;
+    margin-right: 2em;
+    font-weight: 600;
+    font-size: 20px;
+    position: relative;
+}
+
+.navbar .navInner .navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    bottom: -4px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .4s ease-in-out;
+}
+
+.navbar .navInner .navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+.navbar .navInner .navbar-nav .nav-link:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navbar .navInner .navbar-nav .nav-link.active {
+    color: #E61729;
+}
+
+.navbar .navInner .navbar-nav .nav-link.active:hover {
+    cursor: auto;
+}
+
+.navbar .navInner .navbar-nav .nav-link.active::before {
+    height: 0px;
+}
+
 .navbar .navInner .flexContainerNavSearch {
     background: #ffffff;
     border-radius: 10px;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 1em;
+    margin-bottom: 1em;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-bottom: 1%;
-    padding-top: 1%;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
     margin-right: 2em;
 }
 
 .navbar .navInner .flexContainerNavSearch .flexNavSearchItem {
     position: relative;
+    padding-left: 0.5em;
 }
 
 .navbar .navInner .flexContainerNavSearch .flexNavSearchItem.flexNavSearchItemSearchPic img {
@@ -157,7 +203,7 @@ body {
     border-right: 2px solid #999999;
     height: 100%;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 600;
     color: #333333;
 }
 
@@ -179,13 +225,9 @@ body {
 }
 
 
-
-
-
-
 /** HEADER **/
 
-.aboutPage .backgroundImage {
+.backgroundImage {
     height: 400px;
     background-image: url(../assets/images/headerbackBack.png);
     background-size: cover;
@@ -193,7 +235,7 @@ body {
     color: #ffffff;
 }
 
-.aboutPage .backgroundImage h1 {
+.backgroundImage h1 {
     top: 50%;
     position: relative;
     font-family: Porter_Sans_Block;
@@ -202,33 +244,33 @@ body {
 
 /** HISTORY AND GOALS **/
 
-.aboutPage .containerTextImage h5 {
+.containerTextImage h5 {
 
     color: #53bfdb;
     font-family: poppins_medium;
 
 }
 
-.aboutPage .containerTextImage h2 {
+.containerTextImage h2 {
 
     color: #45016E;
     font-family: poppins_bold;
 
 }
 
-.aboutPage .containerTextImage p {
+.containerTextImage p {
 
     font-family: poppins_regular;
 
 }
 
-.aboutPage .containerTextImage ol {
+.containerTextImage ol {
 
     font-family: poppins_regular;
 
 }
 
-.aboutPage .colTextImageInnerRight {
+.containerTextImage .colTextImageInnerRight {
 
     height: 100%;
     overflow: hidden;
@@ -236,11 +278,82 @@ body {
 
 }
 
-.aboutPage .containerTextImage img {
+.containerTextImage img {
 
     transform: translateX(-50%);
     height: 100%;
     position: relative;
     left: 50%;
 
+}
+
+
+/** FOOTER **/
+
+footer {
+    padding: 4% 5%;
+}
+
+.containerFooter {
+    padding: 0% 2%;
+}
+
+.footerLogo {
+    overflow: hidden;
+    position: relative;
+}
+
+.footerLogo img {
+    width: 266px;
+    transform: scale(1);
+    transition: .3s ease-in-out;
+}
+
+footer h6 {
+    font-family: poppins_medium;
+    font-size: 18px;
+    color: #676767;
+}
+
+footer p {
+    text-align: left;
+    color: #676767;
+    font-weight: 200;
+    font-family: poppins_regular;
+    font-size: 18px;
+    margin-top: 0px;
+    line-height: 30px;
+}
+
+footer a {
+    text-align: left;
+    color: #676767;
+    font-weight: 200;
+    font-family: poppins_regular;
+    font-size: 18px;
+    margin-top: 0px;
+    line-height: 30px;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.footerSocialInner img {
+    width: 77px;
+    border-radius: 10px;
+}
+
+.footerLinks a {
+    text-align: right;
+    color: #676767;
+    font-weight: 600;
+    font-family: poppins_regular;
+    font-size: 18px;
+    margin-top: 0px;
+    line-height: 30px;
+    text-decoration: none;
+    margin-bottom: 15px;
+    margin-left: 6%;
+    position: relative;
 }
