@@ -1,0 +1,210 @@
+/** FONTS **/
+
+@font-face {
+    font-family: 'porter_sans_block';
+    src: url('../assets/fonts/porter_sans_block/porter-sans-inline-block-webfont.eot');
+    src: url('../assets/fonts/porter_sans_block/porter-sans-inline-block-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/porter_sans_block/porter-sans-inline-block-webfont.woff') format('woff'),
+         url('../assets/fonts/porter_sans_block/porter-sans-inline-block-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins_bold';
+    src: url('../assets/fonts/poppins/poppins-bold-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins_semi_bold';
+    src: url('../assets/fonts/poppins/poppins-semibold-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins_medium';
+    src: url('../assets/fonts/poppins/poppins-medium-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins_regular';
+    src: url('../assets/fonts/poppins/poppins-regular-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/** GENERAL **/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: poppins_medium, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 0;
+}
+
+
+/** NAVIGATION **/
+nav {
+    position: relative;
+}
+
+nav .navInner {
+    position: absolute;
+    top: 0px;
+    width: 92%;
+    /* background-color: #45016E; */
+    /* opacity: 0.5; */
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 40px;
+    margin-top: 1%;
+    background: rgba(197, 178, 208, 0.8);
+    z-index: 2;
+
+    /**font-family: 'Porter Sans Block';**/
+    font-size: 20px;
+    color: #000000;
+    left: 2%;
+}
+
+nav.navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+nav .navInner .navbar-brand {
+    margin-left: 2em;
+}
+
+nav .navInner .navbar-brand .navLogo {
+    width: 266px;
+}
+
+nav.navbar .navbar-nav {
+    margin: 0 auto;
+}
+
+nav .navInner .flexContainerNavSearch {
+    background: #ffffff;
+    border-radius: 10px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-right: 2em;
+}
+
+nav .navInner .flexContainerNavSearch .flexNavSearchItem {
+    position: relative;
+}
+
+nav .navInner .flexContainerNavSearch .flexNavSearchItem.flexNavSearchItemSearchPic img {
+    position: relative;
+    top: 2px;
+    margin-left: 4%;
+    width: 35px;
+}
+
+nav .navInner .flexContainerNavSearch .flexNavSearchItem form input {
+    border: 0px;
+    border-right: 2px solid #999999;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333333;
+}
+
+nav .navInner .flexContainerNavSearch .flexNavSearchItem.flexNavSearchItemBasketPic img {
+    padding: 5px 10px 5px 10px;
+    position: relative;
+    top: 2px;
+}
+
+nav .navInner .flexContainerNavSearch .flexNavSearchItem.flexNavSearchItemBasketPic .cartItemsAmount {
+    position: absolute;
+    border-radius: 50px;
+    background-color: #f54b4c;
+    color: #ffffff;
+    padding: 5px 13px;
+    font-size: 16px;
+    top: -28px;
+    right: -25px;
+}
+
+/** HEADER **/
+
+.aboutPage .backgroundImage {
+    height: 400px;
+    background-image: url(../assets/images/headerbackBack.png);
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.aboutPage .backgroundImage h1 {
+    top: 50%;
+    position: relative;
+    font-family: Porter_Sans_Block;
+}
+
+
+/** HISTORY AND GOALS **/
+
+.aboutPage .containerTextImage h5 {
+
+    color: #53bfdb;
+    font-family: poppins_medium;
+
+}
+
+.aboutPage .containerTextImage h2 {
+
+    color: #45016E;
+    font-family: poppins_bold;
+
+}
+
+.aboutPage .containerTextImage p {
+
+    font-family: poppins_regular;
+
+}
+
+.aboutPage .containerTextImage ol {
+
+    font-family: poppins_regular;
+
+}
+
+.aboutPage .colTextImageInnerRight {
+
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50px;
+
+}
+
+.aboutPage .containerTextImage img {
+
+    transform: translateX(-50%);
+    height: 100%;
+    position: relative;
+    left: 50%;
+
+}

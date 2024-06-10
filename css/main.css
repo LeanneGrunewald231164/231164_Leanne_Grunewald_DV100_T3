@@ -1,17 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: poppins_medium, Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    margin: 0;
-
-
-    
-}
+/** FONTS **/
 
 @font-face {
     font-family: 'porter_sans_block';
@@ -50,6 +37,23 @@ body {
     font-weight: normal;
     font-style: normal;
 }
+
+
+/** GENERAL **/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: poppins_medium, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 0;
+}
+
+
 
 /** NAVIGATION **/
 nav {
