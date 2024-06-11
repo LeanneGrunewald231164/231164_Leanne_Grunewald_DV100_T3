@@ -1,13 +1,70 @@
 /** FLIGHTS **/
+// ToDo: Add check to only run on Flights page
 const decAmount = document.querySelectorAll('.buttonAmount .buttonAmountLeft');
-decAmount.forEach(el => el.addEventListener('click', adjustFlightAmount));
+decAmount.forEach(el => el.addEventListener('click', adjustFlightAmountLess));
 
-function adjustFlightAmount(event){
+const incAmount = document.querySelectorAll('.buttonAmount .buttonAmountRight');
+incAmount.forEach(el => el.addEventListener('click', adjustFlightAmountMore));
 
-  console.log(event.target.getAttribute("data-el"));
+const bookNowButton = document.querySelectorAll('.buttonBookNow');
+bookNowButton.forEach(el => el.addEventListener('click', adjustFlightCart));
 
+function adjustFlightAmountLess(event){
+
+  //Testing:
+  //console.log(event.target.getAttribute("data-el"));
+
+  let currentParent = event.currentTarget.parentNode;
+  let currentGrandParent = event.currentTarget.parentNode.parentNode;
+  let currentAmount = parseInt(currentParent.querySelector('.buttonAmountMiddle').innerHTML);
+
+  // If current amount of flights is more than 0, then -1 the amount of flights
+  if (currentAmount > 0){
+    currentAmount--;
+    currentParent.querySelector('.buttonAmountMiddle').innerHTML = currentAmount;
+  }
+
+  // If current amount of flights is 0, then hide the minus button, and the Book Now button
+  if (currentAmount == 0){
+    // Only add class if class is not already present
+    if (!event.currentTarget.classList.contains('hideValue')){
+      //event.currentTarget.className += " hideValue";
+      //currentGrandParent.querySelector('.buttonBookNow').className += " hideValue";
+      event.currentTarget.classList.add('hideValue');
+      currentGrandParent.querySelector('.buttonBookNow').classList.add('hideValue');
+    }
+  }
+  
 }
 
+function adjustFlightAmountMore(event){
+
+  let currentParent = event.currentTarget.parentNode;
+  let currentGrandParent = event.currentTarget.parentNode.parentNode;
+  let currentAmount = parseInt(currentParent.querySelector('.buttonAmountMiddle').innerHTML);
+
+  // +1 the amount of flights
+  currentAmount++;
+  currentParent.querySelector('.buttonAmountMiddle').innerHTML = currentAmount;
+
+  // If hideValue class is present, remove, as flight amount has increased
+  // Too intense check?
+  //if (currentParent.querySelector('.buttonAmountLeft').classList.contains('hideValue')){}
+
+  // If current amount of flights is 1, then show the minus button, and the Book Now button
+  if (currentAmount == 1){
+    currentParent.querySelector('.buttonAmountLeft').classList.remove('hideValue');
+    currentGrandParent.querySelector('.buttonBookNow').classList.remove('hideValue');
+  }
+  
+}
+
+function adjustFlightCart(event){
+
+  // If flight has been added, hide - +, and change text to "In Cart"
+  
+  
+}
 
 
 /** STILL IN PROGRESS **/

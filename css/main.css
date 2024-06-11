@@ -1459,6 +1459,12 @@ header.backgroundImage img {
 
 }
 
+.flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonAmount .buttonAmountLeft.hideValue {
+
+    display: none;
+
+}
+
 .flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonAmount .buttonAmountMiddle {
 
     text-align: center;
@@ -1512,6 +1518,12 @@ header.backgroundImage img {
     /**background-color: #53bfdb;**/
     cursor: pointer;
     background-position: 100%;
+}
+
+.flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonBookNow.hideValue {
+
+    display: none;
+
 }
 
 .flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner hr {
