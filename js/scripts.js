@@ -1,18 +1,37 @@
 /** FLIGHTS **/
-// ToDo: Add check to only run on Flights page
+
 const decAmount = document.querySelectorAll('.buttonAmount .buttonAmountLeft');
-decAmount.forEach(el => el.addEventListener('click', adjustFlightAmountLess));
+// Does the decAmount element exist? 
+if (decAmount) { 
+  decAmount.forEach(el => el.addEventListener('click', adjustFlightAmountLess));
+}
 
 const incAmount = document.querySelectorAll('.buttonAmount .buttonAmountRight');
-incAmount.forEach(el => el.addEventListener('click', adjustFlightAmountMore));
+// Does the incAmount element exist? 
+if (incAmount) { 
+  incAmount.forEach(el => el.addEventListener('click', adjustFlightAmountMore));
+}
 
-const bookNowButton = document.querySelectorAll('.buttonBookNow');
-bookNowButton.forEach(el => el.addEventListener('click', adjustFlightCart));
+const bookNowButton = document.querySelectorAll('.buttonBookNow.buttonClickAble');
+// Does the incAmount element exist? 
+if (bookNowButton) { 
+  bookNowButton.forEach(el => el.addEventListener('click', addFlightCart));
+}
+
+// Get the Modal by id
+const cartModal = document.getElementById('cartModal');
+// Does the modal element exist? 
+if (cartModal) { 
+  // When user presses on the "View Cart" button, call the getModalValues function
+  cartModal.addEventListener('show.bs.modal', getModalValues);
+}
+
+// Array containing the flights
+// Each array entry contains an object containing the details of the flight added
+let flightsInCart = [];
+
 
 function adjustFlightAmountLess(event){
-
-  //Testing:
-  //console.log(event.target.getAttribute("data-el"));
 
   let currentParent = event.currentTarget.parentNode;
   let currentGrandParent = event.currentTarget.parentNode.parentNode;
@@ -59,44 +78,30 @@ function adjustFlightAmountMore(event){
   
 }
 
-function adjustFlightCart(event){
+function addFlightCart(event){
 
-  // If flight has been added, hide - +, and change text to "In Cart"
+  let currentParent = event.currentTarget.parentNode;
+  let currentGrandParent = event.currentTarget.parentNode.parentNode;
+  let currentFlight = currentGrandParent.querySelector('.flightName').innerHTML;
+  let currentAmount = parseInt(currentParent.querySelector('.buttonAmountMiddle').innerHTML);
+  let currentPrice = parseInt(currentGrandParent.querySelector('.flexFlightsItemInnerRightInnerInnerPrice').getAttribute("data-flightPrice"));
+  let currentPriceDisplay = currentGrandParent.querySelector('.flexFlightsItemInnerRightInnerInnerPrice').innerHTML;
+
+  flightsInCart.push({flightName: currentFlight, flightAmount: currentAmount, flightPrice: currentPrice, flightPriceDisplay: currentPriceDisplay});
+
+  // If flight has been added, hide - +, and change text to "In Cart", and un-clickable
+  currentParent.querySelector('.buttonAmountLeft').classList.add('hideValue');
+  currentParent.querySelector('.buttonAmountRight').classList.add('hideValue');
+  event.currentTarget.innerHTML = "In Cart";
+  event.currentTarget.classList.remove('buttonClickAble');
   
-  
-}
-
-
-/** STILL IN PROGRESS **/
-
-// Array containing the flights
-let flightsInCart = [];
-
-// TEST DATA FOR DISPLAY PURPOSES AND TEST PURPOSES
-// Each array entry contains an object containing the details of the flight added
-flightsInCart.push({flightName: "Moonlight Meander", flightAmount: 1, flightPrice: "15000"});
-flightsInCart.push({flightName: "Uranus Uncharted", flightAmount: 2, flightPrice: "50000"});
-
-let flightTotal = 0;
-
-
-// ToDo: When pressing the "Book now" button, check if flight is in cart, if it is, increment the amount with the amount on the button (next to Book now). If not, add to array.
-// ToDo: Change the button from "Book now" to "Remove" once flight has been added to the cart. Remove flight from basket and change button back when user press the "Remove" button
-
-// Get the Modal by id
-const cartModal = document.getElementById('cartModal');
-// Does the modal element exist? 
-if (cartModal) {
-  
-  // When user presses on the "View Cart" button, call the getModalValues function
-  cartModal.addEventListener('show.bs.modal', getModalValues);
-
 }
 
 function getModalValues(){
 
+  let flightTotal = 0;
+
   // Content to be displayed in modal
-  // Uses Bootstrap grid for display, but can be changed to tables
   // Heading "row"
   let cartModalBodyContent = `
     
@@ -124,7 +129,6 @@ function getModalValues(){
     flightTotal += flightsInCart[i].flightAmount * flightsInCart[i].flightPrice;
 
     // Content to be displayed, as per the array
-    // As mentioned, uses Bootstrap grid for display, but can be changed to tables
     cartModalBodyContent += `
   
       <tr>
@@ -153,7 +157,7 @@ function getModalValues(){
 
   `;
 
-  // Final div to close container
+  // Final closing tag
   cartModalBodyContent += `
   
     </table>

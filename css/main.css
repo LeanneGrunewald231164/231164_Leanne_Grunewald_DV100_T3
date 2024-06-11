@@ -1481,6 +1481,12 @@ header.backgroundImage img {
 
 }
 
+.flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonAmount .buttonAmountRight.hideValue {
+
+    display: none;
+
+}
+
 .flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonBookNow {
 
     color: #ffffff;
