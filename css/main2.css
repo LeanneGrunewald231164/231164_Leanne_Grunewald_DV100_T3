@@ -290,70 +290,88 @@ body {
 
 /** FOOTER **/
 
-footer {
-    padding: 4% 5%;
-}
-
-.containerFooter {
-    padding: 0% 2%;
-}
-
-.footerLogo {
+.foobar .footerLogo .footerLogoInner a {
     overflow: hidden;
     position: relative;
 }
 
-.footerLogo img {
+.foobar .footerLogo .footerLogoInner a::before {
+	position: absolute;
+	top: 0;
+	left: -70%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 40%;
+	height: 100%;
+	background: linear-gradient(to right, rgba(230,23,41,0) 0%, rgba(230,23,41,.4) 100%);
+	transform: skewX(-30deg);
+}
+
+.foobar .footerLogo .footerLogoInner a:hover::before {
+	animation: sheem .8s;
+}
+
+.foobar .footerLogo .footerLogoInner img {
     width: 266px;
     transform: scale(1);
     transition: .3s ease-in-out;
 }
 
-footer h6 {
+.foobar .footerLogo .footerLogoInner img:hover {
+    transform: scale(1.1);
+}
+
+.foobar h6 {
     font-family: poppins_medium;
-    font-size: 18px;
-    color: #676767;
+    /**color: #676767;**/
 }
 
-footer p {
-    text-align: left;
+.foobar p {
     color: #676767;
-    font-weight: 200;
     font-family: poppins_regular;
-    font-size: 18px;
-    margin-top: 0px;
-    line-height: 30px;
 }
 
-footer a {
-    text-align: left;
+.foobar a {
     color: #676767;
-    font-weight: 200;
     font-family: poppins_regular;
-    font-size: 18px;
-    margin-top: 0px;
-    line-height: 30px;
     display: block;
-    text-decoration: none;
-    margin-bottom: 15px;
     position: relative;
 }
 
-.footerSocialInner img {
+.foobar .footerMenu a:hover {
+    color: #E61729;
+}
+
+.foobar .footerMenu a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #E61729;
+    bottom: -4px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .4s ease-in-out;
+}
+
+.foobar .footerMenu a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.foobar .footerSocialInner img {
     width: 77px;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
-.footerLinks a {
-    text-align: right;
-    color: #676767;
-    font-weight: 600;
-    font-family: poppins_regular;
-    font-size: 18px;
-    margin-top: 0px;
-    line-height: 30px;
-    text-decoration: none;
-    margin-bottom: 15px;
-    margin-left: 6%;
-    position: relative;
+.foobar .footerSocialInner:hover img {
+    background: #E61729;
 }
+
+.foobar .footerLinks a {
+    display: inline;
+}
+
