@@ -26,6 +26,9 @@ if (cartModal) {
   cartModal.addEventListener('show.bs.modal', getModalValues);
 }
 
+const flightContent = document.querySelectorAll('section.flights');
+
+
 // Array containing the flights
 // Each array entry contains an object containing the details of the flight added
 let flightsInCart = [];
@@ -132,13 +135,13 @@ function getModalValues(){
     cartModalBodyContent += `
   
       <tr>
-      <th scope="row">${flightsInCart[i].flightName}</th>
-      <td>${flightsInCart[i].flightAmount}</td>
-      <td>R${flightsInCart[i].flightPrice}</td>
-      <td>R${flightsInCart[i].flightAmount * flightsInCart[i].flightPrice}</td>
-      <td><span>+</span></td>
-      <td><span>-</span></td>
-      <td><span>x</span></td>
+      <th class="flightNameModal" scope="row">${flightsInCart[i].flightName}</th>
+      <td class="flightAmountModal">${flightsInCart[i].flightAmount}</td>
+      <td class="flightPriceModal">R<span>${flightsInCart[i].flightPrice}</span></td>
+      <td class="flightTotalModal">R<span>${flightsInCart[i].flightAmount * flightsInCart[i].flightPrice}</span></td>
+      <td><span class="modalMore">+</span></td>
+      <td><span class="modalLess">-</span></td>
+      <td><span class="modalRemove">x</span></td>
       </tr>
 
     `;
@@ -151,7 +154,7 @@ function getModalValues(){
     <tfoot>
     <th scope="row">Final Total:</th>
     <td colspan="2"></td>
-    <td>R${flightTotal}</td>
+    <td class="flightFinalTotalModal">R<span>${flightTotal}</span></td>
     <td colspan="3"></td>
     </tfoot>
 
@@ -170,8 +173,118 @@ function getModalValues(){
   // Placed html into "inner part" of id container
   cartModalBody.innerHTML = cartModalBodyContent;
 
+  // Adding event listeners here as elements does not exist earlier
+  let modalMore = document.querySelectorAll('.modalMore');
+  // Does the modalMore element exist? 
+  if (modalMore) { 
+    modalMore.forEach(el => el.addEventListener('click', adjustFlightAmountMoreModal));
+  }
+
+  let modalLess = document.querySelectorAll('.modalLess');
+  // Does the modalLess element exist? 
+  if (modalLess) { 
+    modalLess.forEach(el => el.addEventListener('click', adjustFlightAmountLessModal));
+  }
+
 }
 
+function adjustFlightAmountMoreModal(event){
+
+  /**
+  // 1. Increase the amount in the cart
+  let parentNode = event.currentTarget.parentNode;
+  let currentGrandParent = event.currentTarget.parentNode.parentNode;
+
+  let currentFlightName = currentGrandParent.querySelector('.flightNameModal').innerHTML;
+
+  let currentAmount = parseInt(currentGrandParent.querySelector('.flightAmountModal').innerHTML);
+  currentAmount++;
+  currentGrandParent.querySelector('.flightAmountModal').innerHTML = currentAmount;
+
+  // 2. Increase the amount on the Flights page
+  flightContent.forEach(function(el) {
+    if (el.querySelector('.flightName').innerHTML == currentFlightName){
+      el.querySelector('.buttonAmountMiddle').innerHTML = currentAmount;
+    }
+  });
+
+  // 3. Increase the amount in the array
+  for (let i = 0; i < flightsInCart.length; i++) {
+
+  }
+
+
+
+  // 4. Update the totals - total of flight
+
+
+  // 5. Update the totals - final total
+  **/
+
+  // 1. Update the array
+  let currentParentNode = event.currentTarget.parentNode;
+  let currentGrandParent = event.currentTarget.parentNode.parentNode;
+
+  let currentFlightName = currentGrandParent.querySelector('.flightNameModal').innerHTML;
+  let currentAmount = 0;
+
+  for (let i = 0; i < flightsInCart.length; i++) {
+
+    if (flightsInCart[i].flightName == currentFlightName) {
+
+      flightsInCart[i].flightAmount++;
+      currentAmount = flightsInCart[i].flightAmount;
+
+    }
+
+  }
+
+  // 2. Update the amount on the page
+  flightContent.forEach(function(el) {
+    if (el.querySelector('.flightName').innerHTML == currentFlightName){
+      el.querySelector('.buttonAmountMiddle').innerHTML = currentAmount;
+    }
+  });
+
+  // 3. Refresh modal - call function
+  getModalValues();
+
+}
+
+
+function adjustFlightAmountLessModal(event){
+
+  // 1. Update the array
+  let currentParentNode = event.currentTarget.parentNode;
+  let currentGrandParent = event.currentTarget.parentNode.parentNode;
+
+  let currentFlightName = currentGrandParent.querySelector('.flightNameModal').innerHTML;
+  let currentAmount = 0;
+
+  for (let i = 0; i < flightsInCart.length; i++) {
+
+    if (flightsInCart[i].flightName == currentFlightName) {
+
+      // If amount = 0, remove from cart
+
+      flightsInCart[i].flightAmount--;
+      currentAmount = flightsInCart[i].flightAmount;
+
+    }
+
+  }
+
+  // 2. Update the amount on the page
+  flightContent.forEach(function(el) {
+    if (el.querySelector('.flightName').innerHTML == currentFlightName){
+      el.querySelector('.buttonAmountMiddle').innerHTML = currentAmount;
+    }
+  });
+
+  // 3. Refresh modal - call function
+  getModalValues();
+
+}
 
 
 /** CONTACT **/
