@@ -140,7 +140,29 @@ function getModalValues(){
       <td class="flightPriceModal">R<span>${flightsInCart[i].flightPrice}</span></td>
       <td class="flightTotalModal">R<span>${flightsInCart[i].flightAmount * flightsInCart[i].flightPrice}</span></td>
       <td><span class="modalMore">+</span></td>
-      <td><span class="modalLess">-</span></td>
+
+    `;  
+
+    if (flightsInCart[i].flightAmount == 1) {
+
+      cartModalBodyContent += `
+  
+        <td><span class="modalLess hideValue">-</span></td>
+
+      `;
+
+    } else {
+
+      cartModalBodyContent += `
+  
+        <td><span class="modalLess">-</span></td>
+
+      `;
+
+    }
+
+    cartModalBodyContent += `
+    
       <td><span class="modalRemove">x</span></td>
       </tr>
 
@@ -265,10 +287,13 @@ function adjustFlightAmountLessModal(event){
 
     if (flightsInCart[i].flightName == currentFlightName) {
 
-      // If amount = 0, remove from cart
-
-      flightsInCart[i].flightAmount--;
-      currentAmount = flightsInCart[i].flightAmount;
+      // Only -1 if amount is more than 1
+      if (flightsInCart[i].flightAmount > 1){
+        flightsInCart[i].flightAmount--;
+        currentAmount = flightsInCart[i].flightAmount;
+      } else {
+        currentAmount = 1;
+      }
 
     }
 

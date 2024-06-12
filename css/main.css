@@ -53,6 +53,9 @@ body {
     margin: 0;
 }
 
+.hideValue {
+    display: none;
+}
 
 
 /** NAVIGATION **/
