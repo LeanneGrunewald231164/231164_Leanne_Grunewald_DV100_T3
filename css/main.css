@@ -1416,7 +1416,7 @@ header.backgroundImage img {
     font-size: 20px;
     text-align: center;
     border-radius: 12px;
-    padding: 20px;
+    /**padding: 20px;**/
     width: 150px;
     height: 70px;
     font-family: poppins_semi_bold;
@@ -1456,15 +1456,18 @@ header.backgroundImage img {
 
 .flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonAmount .buttonAmountLeft {
 
-    text-align: left;
+    text-align: center;
     display: inline-block;
-    width: 10%;
+    width: 25%;
+    height: 100%;
+    padding-top: 13%;
 
 }
 
 .flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonAmount .buttonAmountLeft.hideValue {
 
-    display: none;
+    /**display: none;**/
+    opacity: 0;
 
 }
 
@@ -1472,15 +1475,19 @@ header.backgroundImage img {
 
     text-align: center;
     display: inline-block;
-    width: 80%;
+    width: 50%;
+    height: 100%;
+    padding-top: 13%;
     
 }
 
 .flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonAmount .buttonAmountRight {
 
-    text-align: left;
+    text-align: center;
     display: inline-block;
-    width: 10%;
+    width: 25%;
+    height: 100%;
+    padding-top: 13%;
 
 }
 

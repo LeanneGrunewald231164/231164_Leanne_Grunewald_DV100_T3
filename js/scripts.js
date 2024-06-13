@@ -162,7 +162,7 @@ function getModalValues(){
     }
 
     cartModalBodyContent += `
-    
+
       <td><span class="modalRemove">x</span></td>
       </tr>
 
@@ -206,6 +206,12 @@ function getModalValues(){
   // Does the modalLess element exist? 
   if (modalLess) { 
     modalLess.forEach(el => el.addEventListener('click', adjustFlightAmountLessModal));
+  }
+
+  let modalRemove = document.querySelectorAll('.modalRemove');
+  // Does the modalRemove element exist? 
+  if (modalRemove) { 
+    modalRemove.forEach(el => el.addEventListener('click', adjustFlightAmountRemoveModal));
   }
 
 }
@@ -311,6 +317,42 @@ function adjustFlightAmountLessModal(event){
 
 }
 
+function adjustFlightAmountRemoveModal(event){
+
+    // 1. Update the array
+  let currentParentNode = event.currentTarget.parentNode;
+  let currentGrandParent = event.currentTarget.parentNode.parentNode;
+
+  let currentFlightName = currentGrandParent.querySelector('.flightNameModal').innerHTML;
+  let currentAmount = 0;
+
+  for (let i = 0; i < flightsInCart.length; i++) {
+
+    if (flightsInCart[i].flightName == currentFlightName) {
+
+      flightsInCart.splice(i, 1);
+
+    }
+
+  }
+
+  // 2. Update the amount on the page
+  // 3. Show + on the page
+  // 4. Change Button text back to Book Now and add class back
+  flightContent.forEach(function(el) {
+    if (el.querySelector('.flightName').innerHTML == currentFlightName){
+      el.querySelector('.buttonAmountMiddle').innerHTML = 0;
+      el.querySelector('.buttonAmountRight').classList.remove('hideValue');
+      el.querySelector('.buttonBookNow').innerHTML = "Book Now";
+      el.querySelector('.buttonBookNow').classList.add('buttonClickAble');
+    }
+  });
+
+  // 5. Refresh modal - call function
+  getModalValues();
+
+}
+
 
 /** CONTACT **/
 /** Get form with name of contact */
@@ -342,3 +384,27 @@ function getValues(event){
   alert(toShow);
 
 }
+
+
+
+/** SEARCH **/
+// Get the search button by id
+const searchButton = document.getElementById('searchButton');
+// Does the searchButton element exist? 
+if (searchButton) { 
+  // When user presses on the search icon, call the getSearchPage function
+  searchButton.addEventListener('click', getSearchPage);
+}
+
+function getSearchPage(event){
+
+  // ToDo: If not on home page, do not add pages to href;
+  window.location.href = 'pages/search.html';
+
+
+
+}
+
+
+
+

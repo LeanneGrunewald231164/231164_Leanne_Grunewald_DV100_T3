@@ -62,6 +62,8 @@ body {
     margin: 0;
 }
 
+.is-hidden { display: none; }
+
 
 /** NAVIGATION **/
 
