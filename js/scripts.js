@@ -140,7 +140,7 @@ function getModalValues(){
       <td class="flightAmountModal">${flightsInCart[i].flightAmount}</td>
       <td class="flightPriceModal">R<span>${flightsInCart[i].flightPrice}</span></td>
       <td class="flightTotalModal">R<span>${flightsInCart[i].flightAmount * flightsInCart[i].flightPrice}</span></td>
-      <td><span class="modalMore">+</span></td>
+      <td class="flightChangesModal"><span class="modalMore">+</span></td>
 
     `;  
 
@@ -148,7 +148,7 @@ function getModalValues(){
 
       cartModalBodyContent += `
   
-        <td><span class="modalLess hideValue">-</span></td>
+        <td class="flightChangesModal"><span class="modalLess hideValue">-</span></td>
 
       `;
 
@@ -156,7 +156,7 @@ function getModalValues(){
 
       cartModalBodyContent += `
   
-        <td><span class="modalLess">-</span></td>
+        <td class="flightChangesModal"><span class="modalLess">-</span></td>
 
       `;
 
@@ -164,7 +164,7 @@ function getModalValues(){
 
     cartModalBodyContent += `
 
-      <td><span class="modalRemove">x</span></td>
+      <td class="flightChangesModal"><span class="modalRemove">x</span></td>
       </tr>
 
     `;
@@ -339,14 +339,16 @@ function adjustFlightAmountRemoveModal(event){
 
   // 2. Update the amount on the page
   // 3. Show + on the page and add class back
-  // 4. Change Button text back to Book Now and add class back
+  // 4. Change Button text back to Book Now and hide button
   flightContent.forEach(function(el) {
     if (el.querySelector('.flightName').innerHTML == currentFlightName){
       el.querySelector('.buttonAmountMiddle').innerHTML = 0;
       el.querySelector('.buttonAmountRight').classList.remove('hideValue');
       el.querySelector('.buttonAmount').classList.add('buttonClickAble');
       el.querySelector('.buttonBookNow').innerHTML = "Book Now";
+      el.querySelector('.buttonBookNow').classList.add('hideValue');
       el.querySelector('.buttonBookNow').classList.add('buttonClickAble');
+      
     }
   });
 
@@ -358,10 +360,19 @@ function adjustFlightAmountRemoveModal(event){
 
 /** CONTACT **/
 /** Get form with name of contact */
-let form = document.forms["contact"];
+let contactForm = document.forms["contact"];
+let contactFormClose = document.querySelector('.buttonContactModelClose');
 
-/** When form submits (event of submitting), call the getValues function */
-//form.addEventListener("submit", getValues);
+
+// Does the contactForm element exist? 
+if (contactForm) { 
+  //When form submits (event of submitting), call the getValues function
+  contactForm.addEventListener("submit", getValues);
+
+  // Close Popup click event
+  contactFormClose.addEventListener("click", closeContactPopup);
+
+}
 
 function getValues(event){
 
@@ -383,13 +394,31 @@ function getValues(event){
   `;
 
   // Alert content
-  alert(toShow);
+  //alert(toShow);
+
+  // Add content to popup
+  document.getElementById("contactModal").querySelector('.contactModelMessage').innerHTML = toShow;
+
+  // Show popup
+  document.getElementById("contactModal").classList.add('showValue');
+
+}
+
+function closeContactPopup(event){
+
+  // Remove content from popup
+  document.getElementById("contactModal").querySelector('.contactModelMessage').innerHTML = "";
+
+  // Hide popup
+  document.getElementById("contactModal").classList.remove('showValue');
 
 }
 
 
 
 /** SEARCH BAR HEADER **/
+let currentURL = window.location.href;
+
 // Get the search button by id
 const searchButton = document.getElementById('searchButton');
 // Does the searchButton element exist? 
@@ -402,17 +431,18 @@ function getSearchPage(event){
 
   // What was the user searching for?
   let userSearch = document.getElementById("searchBarHead").value;
-  
 
-  // ToDo: If not on home page, do not add pages to href;
-  window.location.href = 'pages/search.html?s='+userSearch;
+  if (currentURL.toLowerCase().includes('/pages/')){
+    // If not on home page, do not add pages to href
+    window.location.href = 'search.html?s='+userSearch;
+  } else {
+    window.location.href = 'pages/search.html?s='+userSearch;
+  }  
 
 }
 
 /** SEARCH RESULT **/
 // Check if URL contains search keyword, but only on results page
-let currentURL = window.location.href;
-
 checkURL();
 
 function checkURL() {
@@ -435,5 +465,27 @@ function checkURL() {
 }
 
 function liveSearch() {
-  
+
+  // Get all the result cards
+  let resultCards = document.querySelectorAll('.card')
+
+  // What was the user searching for?
+  let searchQuery = document.getElementById("searchbox").value;
+
+  // Loop through the result cards
+  for (let i = 0; i < resultCards.length; i++) {
+
+    // Does this result card contain the text that the user is looking for?
+    if(resultCards[i].innerText.toLowerCase().includes(searchQuery.toLowerCase())) {
+      
+      // It does, so show result card
+      resultCards[i].classList.remove("isHidden");
+
+    } else {
+
+      // It does not, so hide the result card
+      resultCards[i].classList.add("isHidden");
+
+    }
+  }
 }

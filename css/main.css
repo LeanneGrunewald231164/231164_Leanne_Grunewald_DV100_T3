@@ -1647,6 +1647,130 @@ header.backgroundImage img {
 
 }
 
+/** MODAL **/
+#cartModal #cartModalLabel {
+    text-align: left;
+    color: #45016E;
+    font-weight: 800;
+    font-family: poppins_bold;
+    font-size: 48px;
+    line-height: 65px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#cartModal thead {
+    text-align: left;
+    color: #53bfdb;
+    text-transform: uppercase;
+    font-family: poppins_medium;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+#cartModal tfoot {
+    text-align: left;
+    color: #53bfdb;
+    text-transform: uppercase;
+    font-family: poppins_medium;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+#cartModal tbody {
+    text-align: left;
+    color: #333333;
+    font-weight: 200;
+    font-family: poppins_regular;
+    font-size: 18px;
+    margin-top: 0px;
+    line-height: 30px;
+}
+
+#cartModal tbody .flightChangesModal {
+    text-align: center;
+}
+
+#cartModal tbody .flightChangesModal span {
+    text-align: center;
+    width: 50%;
+    display: inline-block;
+    margin: 0;
+}
+
+#cartModal tbody .flightChangesModal span:hover {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#cartModal tbody .flightChangesModal span.hideValue {
+    display: none;
+}
+
+#cartModal .buttonCheckOut {
+
+    color: #ffffff;
+    background-color: #E61729;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 12px;
+    padding: 20px;
+    width: 270px;
+    height: 70px;
+    font-family: poppins_semi_bold;
+    border: none;
+    margin-top: 20px;
+
+    background-image: linear-gradient(-30deg, #53bfdb 50%, transparent 50%);
+    background-size: 700px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    transition: background .4s ease-in-out;
+
+}
+
+#cartModal .buttonCheckOut:hover {
+
+    color: #ffffff;
+    /**background-color: #45016E;**/
+    cursor: pointer;
+    background-position: 100%;
+
+}
+
+#cartModal .buttonContinueShopping {
+
+    color: #ffffff;
+    background-color: #45016E;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 12px;
+    /**padding: 20px;**/
+    width: 270px;
+    height: 70px;
+    font-family: poppins_semi_bold;
+    border: none;
+    margin-top: 20px;
+    margin-right: 5%;
+
+    background-image: linear-gradient(-30deg, #E61729 50%, transparent 50%);
+    background-size: 700px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    transition: background .4s ease-in-out;
+
+}
+
+#cartModal .buttonContinueShopping:hover {
+
+    color: #ffffff;
+    /**background-color: #E61729;**/
+    cursor: pointer;
+    background-position: 100%;
+
+}
+
+
 /** CONTACT **/
 /** HEADER **/
 
@@ -1970,6 +2094,73 @@ header.backgroundImage img {
     /**background-color: #ffffff;**/
     cursor: pointer;
     background-position: 100%;
+}
+
+.contactPage #contactModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 2;
+}
+
+.contactPage #contactModal.showValue {
+    display: block;
+}
+
+.contactPage #contactModal .contactModalOuter {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 40%;
+    background: #45016E;
+    padding: 5%;
+}
+
+.contactPage #contactModal .contactModalOuter .contactModalInner p {
+    font-weight: 200;
+    font-family: poppins_regular;
+    font-size: 18px;
+    margin-top: 0px;
+    line-height: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.contactPage #contactModal .contactModalOuter .contactModalInner .buttonContactModelClose {
+    color: #ffffff;
+    background-color: #E61729;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 12px;
+    padding: 20px;
+    width: 270px;
+    height: 70px;
+    font-family: poppins_semi_bold;
+    border: none;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10%;
+
+    background-image: linear-gradient(-30deg, #ffffff 50%, transparent 50%);
+    background-size: 700px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    transition: background .4s ease-in-out;
+}
+
+.contactPage #contactModal .contactModalOuter .contactModalInner .buttonContactModelClose:hover {
+
+    cursor: pointer;
+    color: #E61729;
+    /**background-color: #ffffff;**/
+    background-position: 100%;
+
 }
 
 

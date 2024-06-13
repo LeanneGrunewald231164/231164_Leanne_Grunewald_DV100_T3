@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="../css/main2.css">
 
     </head>
-    <body class="aboutPage">
+    <body class="searchPage">
         
         <!-- NAV -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -40,20 +40,20 @@
                             <a class="nav-link" href="about.html">About</a>
                         </li>
                     </ul>
-                    <!--<div class="flexContainerNavSearch">
-                        <div class="flexNavSearchItem flexNavSearchItemSearchPic">
+                    <div class="flexContainerNavSearch">
+                        <div id="searchButton" class="flexNavSearchItem flexNavSearchItemSearchPic">
                             <span><img src="../assets/images/search.png" ></span>
                         </div>
                         <div class="flexNavSearchItem">
                             <form>
-                                <input type="text" placeholder="Search" />
+                                <input id="searchBarHead" type="text" placeholder="Search" />
                             </form>
                         </div>
                         <div class="flexNavSearchItem flexNavSearchItemBasketPic">
                             <span><img src="../assets/images/basket.png" ></span>
                             <span class="cartItemsAmount">2</span>
                         </div>
-                    </div>-->
+                    </div>
                 </div>
             </div>
         </nav>
@@ -69,19 +69,20 @@
                 <div class="row rowTextImage">
                     <div class="col colTextImage">
                         <div class="colTextImageInner colTextImageInnerLeft pe-5">
-                            <label for="searchbox">Search</label>
-                            <input type="search" oninput="liveSearch()" id="searchbox">
+                            <label for="searchbox" class="fw-bold fs-5 me-3  searchboxLabel">Search:</label>
+                            <input type="search" oninput="liveSearch()" id="searchbox" class="fs-5 fw-bold px-3 py-3 mb-5">
                         </div>
                     </div>
                 </div>
                 <div class="row rowTextImage">
                     <div class="col colTextImage">
                         <div class="colTextImageInner colTextImageInnerLeft pe-5">
-                            <div class="card">
+                            <div class="card mb-4">
                                 <div class="card-body">
-                                    <h5 class="card-title">The Classic Mars Experience</h5>
-                                    <p class="card-text">Embark on a Mars vacation: red deserts, ancient relics, and towering canyons await. </p>
-                                    <a href="flights.html#marsFlightSection" class="btn btn-primary">Go</a>
+                                    <h5 class="card-title fw-bold text-uppercase text-start mb-0">The Classic Mars Experience</h5>
+                                    <p class="card-text fs-5 text-start text-muted fw-light">Embark on a Mars vacation: red deserts, ancient relics, and towering canyons await. </p>
+                                    <span class="isHidden">Enjoy low-gravity hiking, rover trips to Olympus Mons, and stargazing under Phobos and Deimos. Unforgettable adventures beckon on the rust-colored landscapes of the Red Planet.</span> 
+                                    <a href="flights.html#marsFlightSection" class="btn buttonGo fs-5 text-center">Go</a>
                                 </div>
                             </div>
                         </div>
@@ -90,11 +91,68 @@
                 <div class="row rowTextImage">
                     <div class="col colTextImage">
                         <div class="colTextImageInner colTextImageInnerLeft pe-5">
-                            <div class="card">
+                            <div class="card mb-4">
                                 <div class="card-body">
-                                    <h5 class="card-title">Neptune’s Cosmic Dive</h5>
-                                    <p class="card-text">Embark on a voyage to Neptune aboard the "Neptune Voyager." </p>
-                                    <a href="flights.html#neptuneFlightSection" class="btn btn-primary">Go</a>
+                                    <h5 class="card-title fw-bold text-uppercase text-start mb-0">Neptune’s Cosmic Dive</h5>
+                                    <p class="card-text fs-5 text-start text-muted fw-light">Embark on a voyage to Neptune aboard the "Neptune Voyager." </p>
+                                    <span class="isHidden">Witness surreal vistas of swirling clouds and rings. Experience weightlessness and explore frigid oceans. Engage in thrilling spacewalks, observe celestial phenomena, and savor gourmet space cuisine. An unforgettable adventure awaits, blending luxury with cosmic exploration.</span> 
+                                    <a href="flights.html#neptuneFlightSection" class="btn buttonGo fs-5 text-center">Go</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row rowTextImage">
+                    <div class="col colTextImage">
+                        <div class="colTextImageInner colTextImageInnerLeft pe-5">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold text-uppercase text-start mb-0">The Giant’s Journey</h5>
+                                    <p class="card-text fs-5 text-start text-muted fw-light">Embark on a Jupiter voyage aboard the "Jupiter Odyssey."</p>
+                                    <span class="isHidden">Witness its majestic storms and swirling atmosphere. Dive into metallic hydrogen oceans. Explore its moons, each a world unto itself. Engage in gravity surfing, comet chasing, and space excursions. Experience cosmic wonder in luxury, blending exploration with adventure.</span> 
+                                    <a href="flights.html#jupiterFlightSection" class="btn buttonGo fs-5 text-center">Go</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row rowTextImage">
+                    <div class="col colTextImage">
+                        <div class="colTextImageInner colTextImageInnerLeft pe-5">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold text-uppercase text-start mb-0">Ring Around a Saturn</h5>
+                                    <p class="card-text fs-5 text-start text-muted fw-light">Embark on a thrilling voyage to Saturn aboard the "Saturn Explorer." </p>
+                                    <span class="isHidden">Marvel at its iconic rings and turbulent storms. Explore its diverse moons, from icy Enceladus to mysterious Titan, with activities including rover expeditions and cave exploration. Experience the wonders of the cosmos amidst luxurious accommodations, where the thrill of discovery intertwines seamlessly with the excitement of adventure.</span> 
+                                    <a href="flights.html#saturnFlightSection" class="btn buttonGo fs-5 text-center">Go</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row rowTextImage">
+                    <div class="col colTextImage">
+                        <div class="colTextImageInner colTextImageInnerLeft pe-5">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold text-uppercase text-start mb-0">Uranus Uncharted</h5>
+                                    <p class="card-text fs-5 text-start text-muted fw-light">Embark on a cosmic adventure to Uranus with our "Uranus Unveiled" tour. </p>
+                                    <span class="isHidden">Explore its icy atmosphere and captivating moons. Experience thrilling zero-gravity excursions, witness mesmerizing auroras, and immerse yourself in celestial photography workshops. With luxury accommodations and expert guides, discover the wonders of Uranus in a journey of a lifetime.</span> 
+                                    <a href="flights.html#uranusFlightSection" class="btn buttonGo fs-5 text-center">Go</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row rowTextImage">
+                    <div class="col colTextImage">
+                        <div class="colTextImageInner colTextImageInnerLeft pe-5">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold text-uppercase text-start mb-0">Moonlight Meander</h5>
+                                    <p class="card-text fs-5 text-start text-muted fw-light">Experience the ultimate lunar getaway with our "Moonlight Meander" package. </p>
+                                    <span class="isHidden">Depart Earth's atmosphere aboard the "Celestial Cruiser" for a short but unforgettable journey to the Moon. Enjoy lunar walks, breathtaking views of Earthrise, and stargazing under the moon's serene glow. Immerse yourself in luxury accommodations amidst the tranquility of space. </span> 
+                                    <a href="flights.html#uranusFlightSection" class="btn buttonGo fs-5 text-center">Go</a>
                                 </div>
                             </div>
                         </div>

@@ -37,7 +37,7 @@
                             </div>
                             <div class="flexNavSearchItem">
                                 <form>
-                                    <input type="text" placeholder="Search" />
+                                    <input id="searchBarHead" type="text" placeholder="Search" />
                                 </form>
                             </div>
                             <div class="flexNavSearchItem flexNavSearchItemBasketPic">
@@ -254,7 +254,7 @@
         <!-- FLIGHTS -->
         <!-- WHITE -->
         <!-- JUPITER -->
-        <section class="flights flightsWhite">
+        <section id="jupiterFlightSection" class="flights flightsWhite">
             <div class="flexContainerFlights">
                 <div class="flexFlightsItem flexFlightsItemLeft">
                     <div class="flexFlightsItemInner flexFlightsItemInnerLeft">
@@ -340,7 +340,7 @@
         <!-- FLIGHTS -->
         <!-- PURPLE -->
         <!-- SATURN -->
-        <section class="flights flightsPurple">
+        <section id="saturnFlightSection" class="flights flightsPurple">
             <div class="flexContainerFlights">
                 <div class="flexFlightsItem flexFlightsItemLeft">
                     <div class="flexFlightsItemInner flexFlightsItemInnerLeft">
@@ -426,7 +426,7 @@
         <!-- FLIGHTS -->
         <!-- WHITE -->
         <!-- URANUS -->
-        <section class="flights flightsWhite">
+        <section id="uranusFlightSection" class="flights flightsWhite">
             <div class="flexContainerFlights">
                 <div class="flexFlightsItem flexFlightsItemLeft">
                     <div class="flexFlightsItemInner flexFlightsItemInnerLeft">
@@ -512,7 +512,7 @@
         <!-- FLIGHTS -->
         <!-- PURPLE -->
         <!-- MOON -->
-        <section class="flights flightsPurple">
+        <section id="moonFlightSection" class="flights flightsPurple">
             <div class="flexContainerFlights">
                 <div class="flexFlightsItem flexFlightsItemLeft">
                     <div class="flexFlightsItemInner flexFlightsItemInnerLeft">
@@ -678,7 +678,6 @@
         </footer>
   
         <!-- Full page Modal, as per Bootstrap documentation-->
-        <!-- ToDo: Apply styling and classes to Modal -->
         <div class="modal fade" id="cartModal">
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content">
@@ -698,9 +697,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue shopping</button>
-                        <!-- Check out button does not work yet -->
-                        <a href="../index.html"><button type="button" class="btn btn-primary">Check out</button></a>
+                        <button type="button" class="buttonContinueShopping" data-bs-dismiss="modal">Continue shopping</button>
+                        <a href="../index.html"><button type="button" class="buttonCheckOut">Check out</button></a>
                     </div>
                 </div>
             </div>

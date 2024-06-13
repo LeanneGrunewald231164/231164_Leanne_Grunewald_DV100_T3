@@ -62,7 +62,7 @@ body {
     margin: 0;
 }
 
-.is-hidden { display: none; }
+.isHidden { display: none; }
 
 
 /** NAVIGATION **/
@@ -378,3 +378,43 @@ body {
     display: inline;
 }
 
+
+/** SEARCH RESULTS **/
+.searchPage .searchboxLabel {
+    font-family: poppins_regular;
+}
+
+.searchPage #searchbox {
+    height: 100%;
+    color: #333333;
+    font-family: poppins_regular;
+    width: 80%;
+}
+
+
+.containerTextImage a.btn {
+    color: #ffffff;
+    background-color: #E61729;
+    border-radius: 12px;
+    padding: 20px;
+    width: 270px;
+    height: 70px;
+    font-family: poppins_semi_bold;
+    border: none;
+
+    background-image: linear-gradient(-30deg, #53bfdb 50%, transparent 50%);
+    background-size: 700px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    transition: background .4s ease-in-out;
+
+}
+
+.containerTextImage a.btn:hover {
+
+    color: #ffffff;
+    /**background-color: #45016E;**/
+    cursor: pointer;
+    background-position: 100%;
+
+}
