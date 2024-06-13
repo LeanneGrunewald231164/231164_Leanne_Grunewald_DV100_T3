@@ -1432,12 +1432,18 @@ header.backgroundImage img {
 
 }
 
-.flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonAmount:hover {
+.flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonAmount.buttonClickAble:hover {
 
     color: #ffffff;
     /**background-color: #E61729;**/
     cursor: pointer;
     background-position: 100%;
+
+}
+
+.flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonAmount:hover {
+
+    cursor: auto;
 
 }
 
@@ -1447,11 +1453,17 @@ header.backgroundImage img {
 
 }
 
-.flights.flightsPurple .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonAmount:hover {
+.flights.flightsPurple .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonAmount.buttonClickAble:hover {
 
     color: #ffffff;
     background-color: #E61729;
     cursor: pointer;
+}
+
+.flights.flightsPurple .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonAmount:hover {
+
+    cursor: auto;
+
 }
 
 .flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonAmount .buttonAmountLeft {
@@ -1493,7 +1505,8 @@ header.backgroundImage img {
 
 .flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonAmount .buttonAmountRight.hideValue {
 
-    display: none;
+    /**display: none;**/
+    opacity: 0;
 
 }
 
@@ -1521,6 +1534,12 @@ header.backgroundImage img {
 
 .flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonBookNow:hover {
 
+    cursor: auto;
+
+}
+
+.flights .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonBookNow.buttonClickAble:hover {
+
     color: #ffffff;
     /**background-color: #45016E;**/
     cursor: pointer;
@@ -1528,7 +1547,7 @@ header.backgroundImage img {
 
 }
 
-.flights.flightsPurple .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonBookNow:hover {
+.flights.flightsPurple .flexContainerFlights .flexFlightsItem .flexFlightsItemInner.flexFlightsItemInnerRight .flexFlightsItemInnerRightInner .buttonBookNow.buttonClickAble:hover {
 
     color: #ffffff;
     /**background-color: #53bfdb;**/

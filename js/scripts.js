@@ -96,6 +96,7 @@ function addFlightCart(event){
   currentParent.querySelector('.buttonAmountLeft').classList.add('hideValue');
   currentParent.querySelector('.buttonAmountRight').classList.add('hideValue');
   event.currentTarget.innerHTML = "In Cart";
+  currentParent.querySelector('.buttonAmount').classList.remove('buttonClickAble');
   event.currentTarget.classList.remove('buttonClickAble');
   
 }
@@ -337,12 +338,13 @@ function adjustFlightAmountRemoveModal(event){
   }
 
   // 2. Update the amount on the page
-  // 3. Show + on the page
+  // 3. Show + on the page and add class back
   // 4. Change Button text back to Book Now and add class back
   flightContent.forEach(function(el) {
     if (el.querySelector('.flightName').innerHTML == currentFlightName){
       el.querySelector('.buttonAmountMiddle').innerHTML = 0;
       el.querySelector('.buttonAmountRight').classList.remove('hideValue');
+      el.querySelector('.buttonAmount').classList.add('buttonClickAble');
       el.querySelector('.buttonBookNow').innerHTML = "Book Now";
       el.querySelector('.buttonBookNow').classList.add('buttonClickAble');
     }
@@ -387,7 +389,7 @@ function getValues(event){
 
 
 
-/** SEARCH **/
+/** SEARCH BAR HEADER **/
 // Get the search button by id
 const searchButton = document.getElementById('searchButton');
 // Does the searchButton element exist? 
@@ -398,13 +400,40 @@ if (searchButton) {
 
 function getSearchPage(event){
 
+  // What was the user searching for?
+  let userSearch = document.getElementById("searchBarHead").value;
+  
+
   // ToDo: If not on home page, do not add pages to href;
-  window.location.href = 'pages/search.html';
-
-
+  window.location.href = 'pages/search.html?s='+userSearch;
 
 }
 
+/** SEARCH RESULT **/
+// Check if URL contains search keyword, but only on results page
+let currentURL = window.location.href;
 
+checkURL();
 
+function checkURL() {
 
+  // Are we on the results page?
+  if (currentURL.toLowerCase().includes('search.html')){
+    
+    // We are on results page
+    // What was the user searching for?
+    let searchQueryPosition = currentURL.indexOf("?s=");
+    let searchQuery = currentURL.substr(searchQueryPosition+3);
+
+    // Add the query to the search box on the page
+    document.getElementById("searchbox").value = searchQuery;
+
+    // Run the function
+    liveSearch();
+    
+  }
+}
+
+function liveSearch() {
+  
+}
