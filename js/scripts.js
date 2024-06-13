@@ -1,32 +1,32 @@
 /** FLIGHTS **/
 
-const decAmount = document.querySelectorAll('.buttonAmount .buttonAmountLeft');
+let decAmount = document.querySelectorAll('.buttonAmount .buttonAmountLeft');
 // Does the decAmount element exist? 
 if (decAmount) { 
   decAmount.forEach(el => el.addEventListener('click', adjustFlightAmountLess));
 }
 
-const incAmount = document.querySelectorAll('.buttonAmount .buttonAmountRight');
+let incAmount = document.querySelectorAll('.buttonAmount .buttonAmountRight');
 // Does the incAmount element exist? 
 if (incAmount) { 
   incAmount.forEach(el => el.addEventListener('click', adjustFlightAmountMore));
 }
 
-const bookNowButton = document.querySelectorAll('.buttonBookNow.buttonClickAble');
+let bookNowButton = document.querySelectorAll('.buttonBookNow.buttonClickAble');
 // Does the incAmount element exist? 
 if (bookNowButton) { 
   bookNowButton.forEach(el => el.addEventListener('click', addFlightCart));
 }
 
 // Get the Modal by id
-const cartModal = document.getElementById('cartModal');
+let cartModal = document.getElementById('cartModal');
 // Does the modal element exist? 
 if (cartModal) { 
   // When user presses on the "View Cart" button, call the getModalValues function
   cartModal.addEventListener('show.bs.modal', getModalValues);
 }
 
-const flightContent = document.querySelectorAll('section.flights');
+let flightContent = document.querySelectorAll('section.flights');
 
 
 // Array containing the flights
@@ -420,7 +420,7 @@ function closeContactPopup(event){
 let currentURL = window.location.href;
 
 // Get the search button by id
-const searchButton = document.getElementById('searchButton');
+let searchButton = document.getElementById('searchButton');
 // Does the searchButton element exist? 
 if (searchButton) { 
   // When user presses on the search icon, call the getSearchPage function
@@ -493,7 +493,7 @@ function liveSearch() {
 
 /** IMAGE SLIDER **/
 // Get the search button by id
-const homeImgSlider = document.getElementById('homeImgSlider');
+let homeImgSlider = document.getElementById('homeImgSlider');
 let currentImgSlider = 0;
 // Does the searchButton element exist? 
 if (homeImgSlider) { 
