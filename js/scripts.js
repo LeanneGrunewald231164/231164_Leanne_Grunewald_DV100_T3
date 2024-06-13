@@ -489,3 +489,58 @@ function liveSearch() {
     }
   }
 }
+
+
+/** IMAGE SLIDER **/
+// Get the search button by id
+const homeImgSlider = document.getElementById('homeImgSlider');
+let currentImgSlider = 0;
+// Does the searchButton element exist? 
+if (homeImgSlider) { 
+
+  homeImgSlider.querySelector('.homeImgSliderLeft').addEventListener("click", imgSliderLeft);
+  homeImgSlider.querySelector('.homeImgSliderRight').addEventListener("click", imgSliderRight);
+
+  imgSliderShowImage(0)
+
+}
+
+function imgSliderLeft(event) {
+
+  imgSliderShowImage(-1);
+
+}
+
+function imgSliderRight(event) {
+
+  imgSliderShowImage(1);
+
+}
+
+
+function imgSliderShowImage(imgNumber) {
+
+  let imagesSlider = homeImgSlider.querySelector('.homeImgSliderImgHolder').children;
+  imagesSlider.item(currentImgSlider).classList.remove('showImage');
+
+  if (imgNumber == -1) {
+    // Left button
+    if (currentImgSlider == 0) {
+      currentImgSlider = imagesSlider.length-1;
+    } else {
+      currentImgSlider--;
+    }
+  } else if (imgNumber == 1) {
+    // Right button
+    if (currentImgSlider == imagesSlider.length-1) {
+      currentImgSlider = 0;
+    } else {
+      currentImgSlider++;
+    }
+  } else {
+    // Default, or no change
+  }
+
+  imagesSlider.item(currentImgSlider).classList.add('showImage');
+
+}

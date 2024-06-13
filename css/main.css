@@ -390,6 +390,18 @@ header .headerTextContainer h3 {
 
 }
 
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft .flexTripBookerItemInnerLeftInner .flexTripBookerItemInnerLeftMiddle img {
+
+    display: none;
+
+}
+
+.tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft .flexTripBookerItemInnerLeftInner .flexTripBookerItemInnerLeftMiddle img.showImage {
+
+    display: block;
+
+}
+
 .tripBooker .flexContainerTripBooker .flexTripBookerItem .flexTripBookerItemInner.flexTripBookerItemInnerLeft .flexTripBookerItemInnerLeftInner .flexTripBookerItemInnerLeftMiddle:hover {
 
     /**filter: blur(2px);**/
